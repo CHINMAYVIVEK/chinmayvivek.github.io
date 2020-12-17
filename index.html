@@ -10,16 +10,16 @@
   <meta content="" name="keywords">
 
   <link rel="manifest" href="manifest.json" />
-<!-- ios support -->
-<link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
-<link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
-<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -570,6 +570,14 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script>
+    // This is the "Offline page" service worker
+
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+    
+  </script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>

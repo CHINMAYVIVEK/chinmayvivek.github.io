@@ -1,7 +1,6 @@
 const staticCacheName = 'ChinmayVivek-static-v1';
 const assets = [
-  
-  "/",
+    "/",
   "/index.html",
   "/assets/css/style.css",
   "/assets/js/app.js",

@@ -2,10 +2,10 @@
     "name": "Chinmay Vivek",
     "short_name": "CV",
     "background_color": "#fdfdfd",
-    "theme_color": "#db4938",
-    "orientation": "portrait-primary",
+    "theme_color": "#eb3656",
+    "orientation": "any",
     "description": "I am a seasoned software expert who has developed products for enterprise clients as well as many venture-backed businesses. I specialize in building applications specific to the business needs of my clients. I have done work in software development, mobile app creation, front-end/back-end web, database/server management, graphic design, and video game development.",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "fullscreen",
     "lang": "English",
     "scope": "Education, Freelancer, Programmer, Web developer, ERP Solutions",
@@ -68,6 +68,13 @@
       "type": "image\/png",
       "density": "4.0"
       }
-    ]
+    ],
+    "features": [
+      "Cross Platform",
+      "fast",
+      "simple"
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
      
   }

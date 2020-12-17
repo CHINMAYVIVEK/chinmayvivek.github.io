@@ -4,11 +4,11 @@ const assets = [
   "/index.html",
   "/assets/css/style.css",
   "/assets/js/app.js",
-  "/assets/img/profile-img.jpg",
-  "/assets/img/portfolio/e-com-1.png",
+  "/assets/img/profile-img.webp",
+  "/assets/img/portfolio/e-com-1.webp",
   "/assets/img/portfolio/tulasi-sansthan.jpg",
-  "/assets/img/portfolio/e-com-2.png",
-  "/assets/img/portfolio/POS.png",
+  "/assets/img/portfolio/e-com-2.webp",
+  "/assets/img/portfolio/POS.webp"
 ];
 // install event
 self.addEventListener('install', evt => {

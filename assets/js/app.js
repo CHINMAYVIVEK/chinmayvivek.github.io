@@ -224,7 +224,7 @@ const showportfolios = () => {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
-        .register("https://chinmayvivek.github.io/serviceWorker-sw.js")
+        .register("https://chinmayvivek.github.io/serviceWorker.js")
         .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })

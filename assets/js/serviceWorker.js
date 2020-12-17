@@ -2,17 +2,12 @@ const staticChinmayVivek = "chinmay-vivek-site-v1"
 const assets = [
   "/",
   "/index.html",
-  "/css/style.css",
-  "/js/app.js",
-  "/assets/img/portfolio/portfolio-1.jpg",
-  "/assets/img/portfolio/portfolio-2.jpg",
-  "/assets/img/portfolio/portfolio-3.jpg",
-  "/assets/img/portfolio/portfolio-4.jpg",
-  "/assets/img/portfolio/portfolio-5.jpg",
-  "/assets/img/portfolio/portfolio-6.jpg",
-  "/assets/img/portfolio/portfolio-7.jpg",
-  "/assets/img/portfolio/portfolio-8.jpg",
-  "/assets/img/portfolio/portfolio-9.jpg",
+  "/assets/css/style.css",
+  "/assets/js/app.js",
+  "/assets/img/portfolio/e-com-1.png",
+  "/assets/img/portfolio/tulasi-sansthan.png",
+  "/assets/img/portfolio/e-com-2.png",
+  "/assets/img/portfolio/POS.png",
 ]
 
 self.addEventListener("install", installEvent => {

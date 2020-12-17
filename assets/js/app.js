@@ -1,15 +1,5 @@
 // Service worker
 
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker
-        .register("https://chinmayvivek.github.io/serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
-    })
-  }
-
-
 !(function($) {
     "use strict";
   
@@ -230,3 +220,12 @@ const showportfolios = () => {
     folio_container.innerHTML = output
   }
   document.addEventListener("DOMContentLoaded", showportfolios)
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("https://chinmayvivek.github.io/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+  }

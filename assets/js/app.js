@@ -189,10 +189,10 @@
 //   portfolio
 const folio_container = document.querySelector(".folio-container")
 const portfolios = [
-  { name: "E-Commerce",  filter:"filter-app",  image: "assets/img/portfolio/e-com-1.png" },
-  { name: "Tulasi Sansthan",  filter:"filter-web",  image: "assets/img/portfolio/tulasi-sansthan.png" },
-  { name: "E-Commerce",  filter:"filter-app",  image: "assets/img/portfolio/e-com-2.png" },
-  { name: "POS", filter:"filter-erp", image: "assets/img/portfolio/POS.png" },
+  { name: "E-Commerce",  filter:"filter-app",  image: "assets/img/portfolio/e-com-1.webp" },
+  { name: "Tulasi Sansthan",  filter:"filter-web",  image: "assets/img/portfolio/tulasi-sansthan.jpg" },
+  { name: "E-Commerce",  filter:"filter-app",  image: "assets/img/portfolio/e-com-2.webp" },
+  { name: "POS", filter:"filter-erp", image: "assets/img/portfolio/POS.webp" },
 ]
 
 const showportfolios = () => {

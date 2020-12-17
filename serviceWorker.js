@@ -7,7 +7,7 @@ const assets = [
   "/assets/js/app.js",
   "/assets/img/profile-img.jpg",
   "/assets/img/portfolio/e-com-1.png",
-  "/assets/img/portfolio/tulasi-sansthan.png",
+  "/assets/img/portfolio/tulasi-sansthan.jpg",
   "/assets/img/portfolio/e-com-2.png",
   "/assets/img/portfolio/POS.png",
 ];

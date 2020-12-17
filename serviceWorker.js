@@ -1,4 +1,4 @@
-const staticCacheName = 'ChinmayVivek-static-v2';
+const staticCacheName = 'ChinmayVivek-static-v1.3';
 const assets = [
     "/",
   "/index.html",
@@ -40,28 +40,28 @@ self.addEventListener('fetch', evt => {
 });
 
 
-// const dynamicCacheName = 'ChinmayVivek-dynamic-v1';
-// // activate event
-// self.addEventListener('activate', evt => {
-//   evt.waitUntil(
-//     caches.keys().then(keys => {
-//       return Promise.all(keys
-//         .filter(key =>  key !== dynamicCacheName)
-//         .map(key => caches.delete(key))
-//       );
-//     })
-//   );
-// });
-// // fetch event
-// self.addEventListener('fetch', evt => {
-//   evt.respondWith(
-//     caches.match(evt.request).then(cacheRes => {
-//       return cacheRes || fetch(evt.request).then(fetchRes => {
-//         return caches.open(dynamicCacheName).then(cache => {
-//           cache.put(evt.request.url, fetchRes.clone());
-//           return fetchRes;
-//         })
-//       });
-//     })
-//   );
-// });
+/// const dynamicCacheName = 'ChinmayVivek-dynamic-v1';
+/// / activate event
+/// elf.addEventListener('activate', evt => {
+///  evt.waitUntil(
+///    caches.keys().then(keys => {
+///      return Promise.all(keys
+///        .filter(key =>  key !== dynamicCacheName)
+///        .map(key => caches.delete(key))
+///      );
+///    })
+///  );
+/// );
+/// / fetch event
+/// elf.addEventListener('fetch', evt => {
+///  evt.respondWith(
+///    caches.match(evt.request).then(cacheRes => {
+///      return cacheRes || fetch(evt.request).then(fetchRes => {
+///        return caches.open(dynamicCacheName).then(cache => {
+///          cache.put(evt.request.url, fetchRes.clone());
+///          return fetchRes;
+///        })
+///      });
+///    })
+///  );
+/// );

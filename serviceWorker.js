@@ -11,7 +11,6 @@ const assets = [
   "/assets/vendor/venobox/venobox.css",
   "/assets/vendor/owl.carousel/assets/owl.carousel.min.css",
   "/assets/vendor/aos/aos.css",
-  "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i",
   "/assets/img/hero-bg.jpg",
   "/assets/img/profile-img.jpg",
   "/assets/img/portfolio/e-com-1.png",

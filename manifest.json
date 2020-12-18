@@ -8,8 +8,7 @@
     "start_url": "/",
     "display": "fullscreen",
     "lang": "English",
-    "scope": "Education, Freelancer, Programmer, Web developer, ERP Solutions",
-    "categories": ["Programming", "education", "Freelancer"],
+    "categories": ["Programming", "Education", "Freelancer", "Programmer", "Web developer", "ERP Solutions"],
     "screenshots" : [
       {
         "src": "screenshots/screenshot1.png",

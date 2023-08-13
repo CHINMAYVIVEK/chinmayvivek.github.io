@@ -1,4 +1,4 @@
-const staticCacheName = 'ChinmayVivek-static-v2.0';
+const staticCacheName = 'ChinmayVivek-static-v2.1';
 const assets = [
     "/",
   "/index.html",

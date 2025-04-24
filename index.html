@@ -2,624 +2,1230 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinmay Vivek - AI/ML Engineer</title>
 
-  <title>Chinmay Vivek :: chinmayvivek.github.io</title>
-  <meta
-    content=" I am a seasoned software expert who has developed products for enterprise clients as well as many venture-backed businesses. I specialize in building applications specific to the business needs of my clients"
-    name="description">
-  <meta
-    content="Chinmay Vivek, Golang Developer India, Python Developer India, Backend Developer India, Developer India, ERP Developer, Freelance Developer"
-    name="keywords">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="manifest" href="/manifest.json" />
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+    <!-- Custom SCSS -->
+    <link rel="stylesheet" href="assets/styles/css/main.min.css">
+    <!-- Custom JS -->
+    <script defer src="assets/js/particles.js"></script>
+    <script defer src="assets/js/main.js"></script>
 
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-800">
+    <div x-data="{ isMenuOpen: false }" class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg fixed w-full z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <span class="text-xl font-bold">Chinmay Vivek</span>
+                        </div>
+                        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                            <a href="#about"
+                                class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">About</a>
+                            <a href="#projects"
+                                class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Projects</a>
+                            <a href="#expertise"
+                                class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Expertise</a>
+                            <a href="#experience"
+                                class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Experience</a>
+                            <a href="#education"
+                                class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Education</a>
+                        </div>
+                    </div>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+                    <!-- Mobile menu button -->
+                    <div class="-mr-2 flex items-center sm:hidden">
+                        <button @click="isMenuOpen = !isMenuOpen"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" x-show="!isMenuOpen" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <svg class="h-6 w-6" x-show="isMenuOpen" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+            <!-- Mobile menu -->
+            <div x-show="isMenuOpen" class="sm:hidden">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="#about"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                    <a href="#projects"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+                    <a href="#expertise"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Expertise</a>
+                    <a href="#experience"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Experience</a>
+                    <a href="#education"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Education</a>
+                </div>
+            </div>
+        </nav>
 
-    <nav class="nav-menu">
-      <ul>
-        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div id="particles-js" class="absolute inset-0 bg-[url('assets/img/hero-bg.jpg')] bg-cover bg-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-800/60 via-purple-800/60 to-pink-800/60"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h1 class="text-5xl sm:text-7xl font-bold mb-6 animate-fade-in-up">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100">AI/ML Engineer
+                        &</span>
+                    <br class="sm:hidden">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100">FinTech
+                        Innovator</span>
+                </h1>
+                <p class="text-2xl mb-8 animate-fade-in-up delay-200 tracking-wide">
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">ML</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">Gen-AI</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">LLM</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">CV</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">Golang</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">Rust</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">Python</span>
+                    <span class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-1 my-2">Microservices</span>
+                </p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="https://chinmayvivek.wordpress.com/" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://twitter.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://facebook.com/chinmayvivekk" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://instagram.com/chinmayvivekk" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://linkedin.com/in/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://github.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://gitlab.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://stackoverflow.com/users/8684941/chinmay-vivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                        <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.95zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.36 1.618zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0z"/></svg>
+                        </span>
+                    </a>
+                </div>
+                <p class="text-xl opacity-90 animate-fade-in-up delay-400 font-light tracking-wider">
+                    <span class="border-b-2 border-white/30 pb-1">IIT Jodhpur Graduate</span>
+                    <span class="mx-3">|</span>
+                    <span class="border-b-2 border-white/30 pb-1">Lead Software Engineer</span>
+                </p>
+            </div>
+        </section>
 
-  </header><!-- End Header -->
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
+                    About Me</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div
+                        class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold mb-6 text-indigo-600">My Journey</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">As a curious and ambitious individual with a
+                            passion for technology and innovation, I am currently pursuing my M.Tech in Artificial
+                            Intelligence. With a strong foundation in computer science and a keen interest in machine
+                            learning, deep learning, and data analytics, I aim to explore the frontiers of AI and its
+                            applications.</p>
+                        <p class="text-gray-700 leading-relaxed">Throughout my academic and professional journey, I have
+                            been fascinated by the potential of Computer Science specifically AI to solve complex
+                            problems, automate processes, and create intelligent systems that can learn and adapt. My
+                            goal is to become a skilled AI professional, capable of designing, developing, and deploying
+                            intelligent solutions that drive positive impact.</p>
+                    </div>
+                    <div class="max-w-3xl mx-auto">
+                        <!-- Core Skills Card -->
+                        <div
+                            class="group bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl border border-indigo-50 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="relative z-10">
+                                <div
+                                    class="text-indigo-600 mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                                    Core Skills</h3>
+                                <div class="space-y-6 mb-8">
+                                    <div class="transform hover:scale-105 transition-transform duration-300">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="text-sm font-semibold text-gray-700">AI & Machine
+                                                Learning</span>
+                                            <span class="text-sm font-bold text-indigo-600">95%</span>
+                                        </div>
+                                        <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transform transition-all duration-1000 ease-out animate-pulse"
+                                                style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="transform hover:scale-105 transition-transform duration-300">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="text-sm font-semibold text-gray-700">System Architecture</span>
+                                            <span class="text-sm font-bold text-indigo-600">92%</span>
+                                        </div>
+                                        <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transform transition-all duration-1000 ease-out animate-pulse"
+                                                style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="transform hover:scale-105 transition-transform duration-300">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="text-sm font-semibold text-gray-700">Programming</span>
+                                            <span class="text-sm font-bold text-indigo-600">90%</span>
+                                        </div>
+                                        <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transform transition-all duration-1000 ease-out animate-pulse"
+                                                style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-semibold transform hover:scale-105 transition-transform duration-300 hover:shadow-md">Python</span>
+                                    <span
+                                        class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-semibold transform hover:scale-105 transition-transform duration-300 hover:shadow-md">Golang</span>
+                                    <span
+                                        class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-semibold transform hover:scale-105 transition-transform duration-300 hover:shadow-md">TensorFlow</span>
+                                    <span
+                                        class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-semibold transform hover:scale-105 transition-transform duration-300 hover:shadow-md">AWS</span>
+                                    <span
+                                        class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-semibold transform hover:scale-105 transition-transform duration-300 hover:shadow-md">System
+                                        Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Chinmay Vivek</h1>
-      <p>I'm <span class="typed" data-typed-items="Programmer, Trainer, Freelancer, Social Worker"></span></p>
-      <div class="social-links">
-        <a href="https://chinmayvivek.wordpress.com" target="_blank" class="wordpress"><i
-            class="bx bxl-wordpress"></i></a>
-        <a href="https://twitter.com/chinmayvivek" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://facebook.com/chinmayvivekk" target="_blank" class="facebook"><i
-            class="bx bxl-facebook"></i></a>
-        <a href="https://instagram.com/chinmayvivekk" target="_blank" class="instagram"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="skype:CHINMAYVIVEK?chat" target="_blank" class="skype"><i class="bx bxl-skype"></i></a>
-        <a href="https://in.linkedin.com/in/chinmayvivek" target="_blank" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/chinmayvivek" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.gitlab.com/chinmayvivek" target="_blank" class="gitlab"><i class="bx bxl-gitlab"></i></a>
-        <a href="https://stackoverflow.com/users/8684941/chinmay-vivek" target="_blank" class="gitlab"><i
-            class="bx bxl-stack-overflow"></i></a>
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-white" x-data="{ activeFilter: 'all' }">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">Featured Projects</h2>
+                <p class="text-gray-600 text-lg text-center mb-12 max-w-2xl mx-auto">Explore my latest work and contributions in AI, Machine Learning, and Software Development</p>
+                
+                <!-- Project Filter -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button @click="activeFilter = 'all'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'all', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'all' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">All</button>
+                    <button @click="activeFilter = 'ai'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'ai', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'ai' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">AI/ML</button>
+                    <button @click="activeFilter = 'web'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'web', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'web' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">Web Dev</button>
+                    <button @click="activeFilter = 'fintech'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'fintech', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'fintech' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">FinTech</button>
+                </div>
 
-      </div>
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'ai'" x-transition class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" style="display: none;">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Image Recognition</h3>
+                            <p class="text-gray-600 mb-4">Deep learning model for real-time object detection and classification using TensorFlow and OpenCV.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">TensorFlow</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">OpenCV</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'fintech'" class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Crypto Trading Bot</h3>
+                            <p class="text-gray-600 mb-4">Automated cryptocurrency trading system with real-time market analysis and ML-based predictions.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Go</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Docker</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'web'" class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Web Dev</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Real-time Analytics Dashboard</h3>
+                            <p class="text-gray-600 mb-4">Modern web application for visualizing and analyzing real-time data streams with interactive charts.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Rust</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">WebSocket</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="py-24 bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600 inline-block">
+                        Areas of Expertise
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Specialized in cutting-edge technologies and modern development practices,
+                        delivering innovative solutions across multiple domains.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
+                    <!-- AI Card -->
+                    <div class="perspective h-96 transform-gpu hover:scale-[1.02] transition-transform duration-300">
+                        <div class="relative preserve-3d group w-full h-full duration-1000 cursor-pointer">
+                            <div class="absolute inset-0 backface-hidden">
+                                <div
+                                    class="card-content bg-white p-8 rounded-2xl shadow-xl border border-indigo-50 hover:shadow-2xl transition-all duration-300">
+                                    <div
+                                        class="text-indigo-600 mb-6 transform transition-transform group-hover:scale-110 group-hover:rotate-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                        </svg>
+                                    </div>
+                                    <h3
+                                        class="text-2xl font-semibold mb-4 text-gray-800 group-hover:text-indigo-600 transition-colors">
+                                        Artificial Intelligence</h3>
+                                    <p class="text-gray-600">Expert in ML frameworks, deep learning models, and AI
+                                        applications with a focus on practical implementation</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">Deep
+                                            Learning</span>
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">NLP</span>
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">Computer
+                                            Vision</span>
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">PyTorch</span>
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">TensorFlow</span>
+                                        <span
+                                            class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">Scikit-learn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages Card -->
+                    <div class="perspective h-96">
+                        <div class="relative preserve-3d group w-full h-full duration-1000">
+                            <div class="absolute inset-0 backface-hidden">
+                                <div class="card-content bg-white p-8 rounded-2xl shadow-xl">
+                                    <div
+                                        class="text-pink-600 mb-6 transform transition-transform group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Programming Languages</h3>
+                                    <p class="text-gray-600">Full-stack development with modern frameworks and tools</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">Go</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">Rust</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">Python</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">Next
+                                            JS</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">HTMX</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">PHP</span>
+                                        <span
+                                            class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-sm font-medium">Flutter</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Architecture Card -->
+                    <div class="perspective h-96">
+                        <div class="relative preserve-3d group w-full h-full duration-1000">
+                            <div class="absolute inset-0 backface-hidden">
+                                <div class="card-content bg-white p-8 rounded-2xl shadow-xl">
+                                    <div
+                                        class="text-purple-600 mb-6 transform transition-transform group-hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">System Architecture</h3>
+                                    <p class="text-gray-600">Cloud-native and distributed systems expert</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">AWS</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Docker</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">K8s</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Helm</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Redis</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">MongoDB</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Postgresql</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Mysql</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Kafka,
+                                            RabbitMQ</span>
+                                        <span
+                                            class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
+                    Professional Experience</h2>
+                <div class="relative">
+                    <!-- Timeline Container -->
+                    <div class="relative max-w-6xl mx-auto">
+                        <!-- Timeline Line -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-indigo-600 via-purple-600 to-pink-600">
+                        </div>
+
+                        <!-- Wissen Technology Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-indigo-800 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="mr-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-indigo-800">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-indigo-800 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2024</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-indigo-800 mb-2">Sr. Senior Software
+                                            Engineer</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-800" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            Wissen Technology
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-800" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>Sep 2024 - Present</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-800" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Bangalore, India</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-800 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Lead in the design, development, and implementation of business
+                                                    solutions and production communication materials</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-800 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Design and development of business solutions and provide counsel
+                                                    on all aspects of the project</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">AI/ML</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">FinTech</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">Golang</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">Rust</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">Microservices</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm hover:bg-indigo-200 transition-colors">Leadership</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Black Buck Insight Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="ml-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-indigo-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2023</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-indigo-600 mb-2">Lead Senior Software
+                                            Engineer</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            Black Buck Insight - BBI
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>Nov 2023 - Feb 2024</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Bangalore, India (Remote)</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Lead in the design, development, and implementation of business
+                                                    solutions and production communication materials</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Design and development of business solutions and provide counsel
+                                                    on all aspects of the project</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">AI/ML</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">FinTech</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">Leadership</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Freecharge Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="mr-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-purple-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2023</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-purple-600 mb-2">Senior Software Engineer
+                                        </h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            Freecharge
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>May 2023 - Sep 2023</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Mumbai, India (Remote)</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-purple-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Development and implementation of comprehensive business solutions
+                                                    in the FinTech domain</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Payments</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Microservices</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Golang</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Rust</span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JustDial Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="ml-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-pink-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2022</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-pink-600 mb-2">Senior Software Engineer
+                                        </h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            JustDial
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>Feb 2022 - May 2023</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Bangalore, India</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-pink-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Led design and development of business solutions and production
+                                                    communication materials</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-pink-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Delegated tasks to 7 team members and provided counsel on all
+                                                    project aspects</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-pink-600 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Supervised assessment of software design and development materials
+                                                    for quality and accuracy</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Team
+                                                Lead</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">System
+                                                Design</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Python</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Golang</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Rust</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Microservices</span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tattva Foundation Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-indigo-400 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="mr-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-indigo-400">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-indigo-400 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2021</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">Software Developer</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            Tattva Foundation
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>Sep 2021 - Jan 2022</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Patna (OnSite)</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Developed numerous websites and software solutions for schools,
+                                                    hospitals, departmental stores, publications, and
+                                                    advertisements</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Managed up to 5 projects or tasks simultaneously while under
+                                                    pressure</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-indigo-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Recommended and consulted with clients on the most appropriate
+                                                    software solutions</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-400 rounded-full text-sm hover:bg-indigo-200 transition-colors">Python</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-400 rounded-full text-sm hover:bg-indigo-200 transition-colors">Web
+                                                Dev</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-400 rounded-full text-sm hover:bg-indigo-200 transition-colors">Odoo</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-400 rounded-full text-sm hover:bg-indigo-200 transition-colors">Microservices</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-400 rounded-full text-sm hover:bg-indigo-200 transition-colors">Consulting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Freelancer Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="ml-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-indigo-400">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-purple-400 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2013</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-purple-400 mb-2">Software Developer</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            Freelancer
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-purple-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>Apr 2013 - Sep 2021</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Remote</span>
+                                        </div>
+                                        <ul class="space-y-4 text-gray-700 mb-4">
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-purple-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Developed numerous websites and software solutions for schools,
+                                                    hospitals, departmental stores, publications, and
+                                                    advertisements</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-purple-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Managed up to 5 projects or tasks simultaneously while under
+                                                    pressure</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <svg class="h-5 w-5 mr-2 text-purple-400 mt-1" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                <span>Recommended and consulted with clients on the most appropriate
+                                                    software solutions</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Full
+                                                Stack</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Web
+                                                Dev</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Consulting</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Python</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Golang</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Odoo</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-400 rounded-full text-sm hover:bg-purple-200 transition-colors">Microservices</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
+                    Education</h2>
+                <div class="relative">
+                    <!-- Timeline Container -->
+                    <div class="relative max-w-6xl mx-auto">
+                        <!-- Timeline Line -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-indigo-600 via-purple-600 to-pink-600">
+                        </div>
+
+                        <!-- M.Tech Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="ml-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-purple-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2026</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-purple-600 mb-2">M.Tech in Artificial
+                                            Intelligence</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            IIT Jodhpur
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>2024 - 2026</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-purple-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Jodhpur, Rajasthan</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Machine
+                                                Learning</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Deep
+                                                Learning</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">Computer
+                                                Vision</span>
+                                            <span
+                                                class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm hover:bg-purple-200 transition-colors">NLP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MCA Card -->
+                        <div class="relative mb-20">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="mr-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-indigo-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -ml-2 w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center transform -rotate-12">
+                                        <span class="text-white font-bold text-lg transform rotate-12">2018</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-indigo-600 mb-2">Master of Computer
+                                            Application</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            ABES Engineering College
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>2016 - 2018</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-indigo-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Ghaziabad, U.P.</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">Computer
+                                                Science</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">Software
+                                                Development</span>
+                                            <span
+                                                class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm hover:bg-indigo-200 transition-colors">Advanced
+                                                Programming</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BCA Card -->
+                        <div class="relative">
+                            <div
+                                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-xl z-10">
+                            </div>
+                            <div
+                                class="ml-auto w-5/6 md:w-3/5 bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border-l-4 border-pink-600">
+                                <div class="relative">
+                                    <div
+                                        class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center transform rotate-12">
+                                        <span class="text-white font-bold text-lg transform -rotate-12">2016</span>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-2xl font-semibold text-pink-600 mb-2">Bachelor of Computer
+                                            Application</h3>
+                                        <p class="text-xl text-gray-600 flex items-center mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                            School of Management Sciences
+                                        </p>
+                                        <div class="flex items-center text-gray-600 mb-2">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <span>2013 - 2016</span>
+                                        </div>
+                                        <div class="flex items-center text-gray-600 mb-4">
+                                            <svg class="h-5 w-5 mr-2 text-pink-600" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            </svg>
+                                            <span>Varanasi, U.P.</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Programming
+                                                Fundamentals</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Database
+                                                Management</span>
+                                            <span
+                                                class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm hover:bg-pink-200 transition-colors">Web
+                                                Technologies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+            class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 overflow-hidden">
+            <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left space-y-4">
+                        <h3 class="text-2xl font-bold">Let's Connect!</h3>
+                        <div class="flex space-x-4 justify-center md:justify-start">
+                            <a href="https://github.com/chinmayvivek"
+                                class="hover:text-white/80 transform hover:scale-110 transition-all">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/chinmayvivek"
+                                class="hover:text-white/80 transform hover:scale-110 transition-all">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/chinmayvivek"
+                                class="hover:text-white/80 transform hover:scale-110 transition-all">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-sm opacity-80">&copy; 2024 Chinmay Vivek. Built with &hearts; using</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 animate-pulse">
+            </div>
+        </footer>
+
+
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Since beginning my journey as a freelance Developer nearly 10 years ago, I've done remote work for
-            agencies, consulted for startups, and collaborated with talented people to create digital products for both
-            business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my
-            chops one design and programming problem at a time.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-img.webp" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Golang Programmer &amp; Backend Developer.</h3>
-            <p class="font-italic">
-              Not Your Average Software Engineer Get ready to turn your ideas into reality.
-            </p>
-            <div class="row">
-
-              <div class="col-lg-6">
-                <ul>
-
-                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> MCA</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
-                </ul>
-              </div>
-            </div>
-            <p>
-              I am a seasoned software expert who has developed products for enterprise clients as well as many
-              venture-backed businesses. I specialize in building applications specific to the business needs of my
-              clients. I have done work in software development, mobile app creation, front-end/back-end web,
-              database/server management, graphic design, and video game development.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="icofont-simple-smile"></i>
-              <span data-toggle="counter-up">232</span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="icofont-document-folder"></i>
-              <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-live-support"></i>
-              <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">15</span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Web Development <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">APIs <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Golang <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Micro Services<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Odoo<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Software Architecture Design<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>I am passionate about building excellent software that improves the lives of those around me. I specialize
-            in creating software for clients ranging from individuals and small-businesses all the way to large
-            enterprise corporations. What would you do if you had a software expert available at your fingertips?</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Chinmay Vivek</h4>
-              <p><em>Innovative and deadline-driven Programmer with 6+ years of experience designing and developing
-                  user-centered software solutions from initial concept to final, polished deliverable.</em></p>
-              <!-- <ul>
-                <li>Gorakhpur, U.P. Bharat</li>
-                <li></li>
-              </ul> -->
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Computer Application</h4>
-              <h5>2016 - 2018</h5>
-              <p><em>ABES Engineering College, Ghaziabad, U.P.</em></p>
-              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Computer Application</h4>
-              <h5>2013 - 2016</h5>
-              <p><em>School of Management Sciences, varanasi, U.P.</em></p>
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Lead Senior Software Engineer </h4>
-              <h5>Nov 2023 - Present</h5>
-              <p><em>Black Buck insight - BBI</em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the business solutions, and production
-                  communication materials</li>
-                <li>design and development of the business solutions and provide counsel on all aspects of the project.
-                </li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Software Engineer </h4>
-              <h5>May 2023 - SEP 2023</h5>
-              <p><em>Freecharge</em></p>
-              <ul>
-                <li>development, and implementation of the business solutions</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Software Engineer </h4>
-              <h5>FEB 2022 - May 2023</h5>
-              <p><em>JustDial</em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the business solutions, and production
-                  communication materials</li>
-                <li>Delegate tasks to the 7 members of the design and development team and provide counsel on all
-                  aspects of the project. </li>
-                <li>Supervise the assessment of all software design and development materials in order to ensure quality
-                  and accuracy of the solution</li>
-
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Software Developer</h4>
-              <h5>APR 2013 - JAN 2022</h5>
-              <p><em>Freelancer</em></p>
-              <ul>
-                <li>Developed numerous websites and software (schools, hospitals, Departmental stores, publications, and
-                  advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate software design</li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p> Below you can see some projects I've been working on lately. I divide each project into four follow-up
-            areas: comprehensive research, wireframing, design & development. This process allows me to create great
-            product with client goals in mind.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-erp">ERP</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="folio-container"></div>
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                  </path>
-                </svg>
-                <i class="bx bxl-nodejs"></i>
-              </div>
-              <h4><a href="">Web Development</a></h4>
-              <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box iconbox-green ">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                  </path>
-                </svg>
-                <i class="bx bxl-android"></i>
-              </div>
-              <h4><a href="">Android Development</a></h4>
-              <p>Android application for your personal/ professional needs</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div class="icon-box iconbox-pink">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                  </path>
-                </svg>
-                <i class="bx bxs-business"></i>
-              </div>
-              <h4><a href="">ERP Development</a></h4>
-              <p>Simple ERP solutions for complex industrial structures and management</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-yellow">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
-                  </path>
-                </svg>
-                <i class="bx bxl-python"></i>
-              </div>
-              <h4><a href="">Python Development</a></h4>
-              <p>Stable python solutions for modern software development</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-red">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
-                  </path>
-                </svg>
-                <i class="bx bxl-apple"></i>
-              </div>
-              <h4><a href="">iOS Development</a></h4>
-              <p>Professional iOS application for Professional business and person</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
-                  </path>
-                </svg>
-                <i class="bx bx-equalizer"></i>
-              </div>
-              <h4><a href="">Tech Consultation</a></h4>
-              <p>I genuinely care about people, and love helping fellow developers work on their ideas.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-        </div>
-
-        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.webp" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I
-              decided to work with you. It’s really great how easy your ERP are to update and manage. I never have any
-              problem at all.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.webp" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              You made it so simple. My new site is so much faster and easier to work with than my old site. I just
-              choose the page, make the change and click save.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.webp" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Wow. I just updated my POS and it was SO SIMPLE. I am blown away. You are truly kick ass. Thanks for being
-              so awesome. High fives!
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Chinmay Vivek</h3>
-      <p>Living, learning, & leveling up one day at a time.</p>
-      <div class="social-links">
-        <a href="https://chinmayvivek.wordpress.com" target="_blank" class="wordpress"><i
-            class="bx bxl-wordpress"></i></a>
-        <a href="https://twitter.com/chinmayvivek" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://facebook.com/chinmayvivekk" target="_blank" class="facebook"><i
-            class="bx bxl-facebook"></i></a>
-        <a href="https://instagram.com/chinmayvivekk" target="_blank" class="instagram"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="skype:CHINMAYVIVEK?chat" target="_blank" class="skype"><i class="bx bxl-skype"></i></a>
-        <a href="https://in.linkedin.com/in/chinmayvivek" target="_blank" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/chinmayvivek" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.gitlab.com/chinmayvivek" target="_blank" class="gitlab"><i class="bx bxl-gitlab"></i></a>
-        <a href="https://stackoverflow.com/users/8684941/chinmay-vivek" target="_blank" class="gitlab"><i
-            class="bx bxl-stack-overflow"></i></a>
-
-      </div>
-      <div class="copyright">&copy; Copyright <strong><span>Chinmay Vivek</span></strong>. All Rights Reserved</div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/assets/vendor/counterup/counterup.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/assets/vendor/typed.js/typed.min.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/js/app.js"></script>
-
 </body>
 
 </html>

@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinmay Vivek - AI/ML Engineer | FinTech Innovator</title>
+    <meta name="theme-color" content="#eb3656">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Chinmay Vivek">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/img/icons/android-icon-192x192.png">
+    <title>AI/ML Engineer & FinTech Innovator | Machine Learning Expert | Chinmay Vivek</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Chinmay Vivek - AI/ML Engineer and FinTech Innovator specializing in Machine Learning, Gen-AI, LLM, Computer Vision, Golang, Rust, Python, and Microservices. IIT Jodhpur Graduate and Lead Software Engineer.">
@@ -43,6 +49,21 @@
     <!-- Custom JS -->
     <script defer src="assets/js/particles.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceWorker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">

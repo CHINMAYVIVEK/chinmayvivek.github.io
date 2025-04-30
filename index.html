@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4f46e5">
     <title>Chinmay Vivek - Senior AI/ML & Backend Engineer | Machine Learning Expert | Golang & Python Developer</title>
+    <link rel="manifest" href="/manifest.json">
     
+    <link rel="apple-touch-icon" href="/assets/icons/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32x32.png">
+
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Chinmay Vivek - Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate with expertise in Golang, Rust, and Python.">
-    <meta name="keywords" content="AI/ML Engineer, Machine Learning, Deep Learning, Gen-AI, LLM, Computer Vision, Golang, Rust, Python, IIT Jodhpur, Software Engineer, Bangalore">
+    <meta name="description"
+        content="Chinmay Vivek - Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate with expertise in Golang, Rust, and Python.">
+    <meta name="keywords"
+        content="AI/ML Engineer, Machine Learning, Deep Learning, Gen-AI, LLM, Computer Vision, Golang, Rust, Python, IIT Jodhpur, Software Engineer, Bangalore">
     <meta name="author" content="Chinmay Vivek">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Chinmay Vivek - AI/ML Engineer | Machine Learning Expert">
-    <meta property="og:description" content="Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate with expertise in Golang, Rust, and Python.">
+    <meta property="og:description"
+        content="Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate with expertise in Golang, Rust, and Python.">
     <meta property="og:image" content="assets/img/hero-bg.jpg">
     <meta property="og:url" content="https://chinmayvivek.com">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@chinmayvivek">
     <meta name="twitter:title" content="Chinmay Vivek - AI/ML Engineer | Machine Learning Expert">
-    <meta name="twitter:description" content="Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate.">
+    <meta name="twitter:description"
+        content="Lead Software Engineer specializing in AI/ML, Gen-AI, LLM, and Computer Vision. IIT Jodhpur graduate.">
     <meta name="twitter:image" content="assets/img/hero-bg.jpg">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://chinmayvivek.com">
 
@@ -41,13 +52,26 @@
     <!-- Custom SCSS -->
     <link rel="stylesheet" href="assets/styles/css/main.min.css">
     <!-- EmailJS CDN -->
-    
+
     <!-- Typed.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
+
     <!-- Custom JS -->
     <script defer src="assets/js/particles.js"></script>
     <script defer src="assets/js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -146,7 +170,8 @@
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div id="particles-js" class="absolute inset-0 bg-[url('assets/img/hero-bg.jpg')] bg-cover bg-center">
-                <div class="absolute inset-0 bg-gradient-to-r from-indigo-800/60 via-purple-800/60 to-pink-800/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-800/60 via-purple-800/60 to-pink-800/60">
+                </div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center text-white">
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-2 sm:px-0">
@@ -161,7 +186,7 @@
                     <span id="typed-roles"></span>
                 </p>
                 <script>
-                    document.addEventListener('DOMContentLoaded', function() {
+                    document.addEventListener('DOMContentLoaded', function () {
                         new Typed('#typed-roles', {
                             strings: [
                                 'Senior AI/ML Architect',
@@ -182,61 +207,104 @@
                         });
                     });
                 </script>
-                
-                <div class="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8 animate-fade-in-up delay-200 tracking-wide px-2 sm:px-0">
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">ML</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Gen-AI</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">LLM</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">CV</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Golang</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Rust</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Python</span>
-                    <span class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Microservices</span>
+
+                <div
+                    class="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8 animate-fade-in-up delay-200 tracking-wide px-2 sm:px-0">
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">ML</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Gen-AI</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">LLM</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">CV</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Golang</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Rust</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Python</span>
+                    <span
+                        class="text-lg sm:text-xl px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm">Microservices</span>
                 </div>
                 <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4 sm:mt-6 px-2 sm:px-0">
-                    <a href="https://chinmayvivek.wordpress.com/" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://chinmayvivek.wordpress.com/"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://twitter.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://twitter.com/chinmayvivek"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://facebook.com/chinmayvivekk" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://facebook.com/chinmayvivekk"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://instagram.com/chinmayvivekk" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://instagram.com/chinmayvivekk"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://linkedin.com/in/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://linkedin.com/in/chinmayvivek"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://github.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://github.com/chinmayvivek"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://gitlab.com/chinmayvivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://gitlab.com/chinmayvivek"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z" />
+                            </svg>
                         </span>
                     </a>
-                    <a href="https://stackoverflow.com/users/8684941/chinmay-vivek" class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
+                    <a href="https://stackoverflow.com/users/8684941/chinmay-vivek"
+                        class="text-white hover:text-white/80 transform hover:scale-110 transition-all" target="_blank">
                         <span class="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm">
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.95zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.36 1.618zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0z"/></svg>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.95zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.36 1.618zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0z" />
+                            </svg>
                         </span>
                     </a>
                 </div>
-                <p class="text-lg sm:text-xl opacity-90 animate-fade-in-up delay-400 font-light tracking-wider px-2 sm:px-0 mt-4 sm:mt-6">
-                    <span class="border-b-2 border-white/30 pb-1 inline-block mb-2 sm:mb-0 sm:inline">IIT Jodhpur Graduate</span>
+                <p
+                    class="text-lg sm:text-xl opacity-90 animate-fade-in-up delay-400 font-light tracking-wider px-2 sm:px-0 mt-4 sm:mt-6">
+                    <span class="border-b-2 border-white/30 pb-1 inline-block mb-2 sm:mb-0 sm:inline">IIT Jodhpur
+                        Graduate</span>
                     <span class="mx-2 sm:mx-3 hidden sm:inline">|</span>
                     <span class="border-b-2 border-white/30 pb-1 inline-block">Lead Software Engineer</span>
                 </p>
@@ -339,34 +407,53 @@
         <!-- Projects Section -->
         <section id="projects" class="py-24 bg-white" x-data="{ activeFilter: 'all' }">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">Featured Projects</h2>
-                <p class="text-gray-600 text-lg text-center mb-12 max-w-2xl mx-auto">Explore my latest work and contributions in AI, Machine Learning, and Software Development</p>
-                
+                <h2
+                    class="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
+                    Featured Projects</h2>
+                <p class="text-gray-600 text-lg text-center mb-12 max-w-2xl mx-auto">Explore my latest work and
+                    contributions in AI, Machine Learning, and Software Development</p>
+
                 <!-- Project Filter -->
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button @click="activeFilter = 'all'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'all', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'all' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">All</button>
-                    <button @click="activeFilter = 'ai'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'ai', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'ai' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">AI/ML</button>
-                    <button @click="activeFilter = 'web'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'web', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'web' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">Web Dev</button>
-                    <button @click="activeFilter = 'fintech'" :class="{ 'bg-indigo-600 text-white': activeFilter === 'fintech', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'fintech' }" class="px-6 py-2 rounded-full font-medium transition-all duration-300">FinTech</button>
+                    <button @click="activeFilter = 'all'"
+                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'all', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'all' }"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">All</button>
+                    <button @click="activeFilter = 'ai'"
+                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'ai', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'ai' }"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">AI/ML</button>
+                    <button @click="activeFilter = 'web'"
+                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'web', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'web' }"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">Web Dev</button>
+                    <button @click="activeFilter = 'fintech'"
+                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'fintech', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'fintech' }"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">FinTech</button>
                 </div>
 
                 <!-- Project Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project Card 1 -->
-                    <div x-show="activeFilter === 'all' || activeFilter === 'ai'" x-transition class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2" style="display: none;">
+                    <div x-show="activeFilter === 'all' || activeFilter === 'ai'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                        style="display: none;">
                         <div class="relative overflow-hidden">
-                            <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
-                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <div
+                                class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                                <span
+                                    class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Image Recognition</h3>
-                            <p class="text-gray-600 mb-4">Deep learning model for real-time object detection and classification using TensorFlow and OpenCV.</p>
+                            <p class="text-gray-600 mb-4">Deep learning model for real-time object detection and
+                                classification using TensorFlow and OpenCV.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">TensorFlow</span>
@@ -374,26 +461,37 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">View Project →</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg></a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Card 2 -->
-                    <div x-show="activeFilter === 'all' || activeFilter === 'fintech'" class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div x-show="activeFilter === 'all' || activeFilter === 'fintech'"
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                         <div class="relative overflow-hidden">
-                            <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
-                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <div
+                                class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
+                                <span
+                                    class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-gray-800">Crypto Trading Bot</h3>
-                            <p class="text-gray-600 mb-4">Automated cryptocurrency trading system with real-time market analysis and ML-based predictions.</p>
+                            <p class="text-gray-600 mb-4">Automated cryptocurrency trading system with real-time market
+                                analysis and ML-based predictions.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Go</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PostgreSQL</span>
@@ -401,26 +499,37 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">View Project →</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg></a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div x-show="activeFilter === 'all' || activeFilter === 'web'" class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div x-show="activeFilter === 'all' || activeFilter === 'web'"
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                         <div class="relative overflow-hidden">
-                            <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            <div
+                                class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                    </path>
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Web Dev</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Web
+                                    Dev</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-gray-800">Real-time Analytics Dashboard</h3>
-                            <p class="text-gray-600 mb-4">Modern web application for visualizing and analyzing real-time data streams with interactive charts.</p>
+                            <p class="text-gray-600 mb-4">Modern web application for visualizing and analyzing real-time
+                                data streams with interactive charts.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Rust</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Node.js</span>
@@ -428,7 +537,11 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">View Project →</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg></a>
                             </div>
                         </div>
                     </div>
@@ -440,72 +553,108 @@
         <section id="expertise" class="py-24 bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600 inline-block">
+                    <h2
+                        class="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600 inline-block">
                         Professional Expertise
                     </h2>
                     <p class="text-gray-600 text-lg max-w-3xl mx-auto">
-                        Leveraging cutting-edge technologies and modern development practices to deliver innovative solutions.
+                        Leveraging cutting-edge technologies and modern development practices to deliver innovative
+                        solutions.
                         Open to exciting opportunities in AI, Software Development, and System Architecture.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
+
                     <!-- AI/ML & Research Expertise -->
                     <div class="transform hover:scale-105 transition-all duration-300">
                         <div class="bg-white p-8 rounded-2xl shadow-xl h-full border border-pink-50">
                             <div class="text-pink-600 mb-6">
-                                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-100 to-transparent opacity-50 rounded-bl-full"></div>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-100 to-transparent opacity-50 rounded-bl-full">
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-4 text-gray-800">AI/ML &amp; Research Expertise</h3>
                             <div class="space-y-4">
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Deep Learning Architecture
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">CNN, RNN, GAN, VAE</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">CNN,
+                                            RNN, GAN, VAE</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         LLM Architecture
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GPT, BERT, T5, LLaMA</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GPT,
+                                            BERT, T5, LLaMA</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Computer Vision
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Object Detection, Segmentation, Tracking</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Object
+                                            Detection, Segmentation, Tracking</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         NLP & Text Analytics
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sentiment Analysis, NER, Text Generation</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sentiment
+                                            Analysis, NER, Text Generation</span>
                                     </span>
                                 </div>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         MLOps & Pipeline Design
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Model Deployment, Monitoring, A/B Testing</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Model
+                                            Deployment, Monitoring, A/B Testing</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Time Series Analysis
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Forecasting, Anomaly Detection, LSTM</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Forecasting,
+                                            Anomaly Detection, LSTM</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Generative AI
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Text-to-Image, Voice Synthesis, Music Generation</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Text-to-Image,
+                                            Voice Synthesis, Music Generation</span>
                                     </span>
                                 </div>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Research Publications
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Peer-reviewed Papers, Conference Presentations</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Peer-reviewed
+                                            Papers, Conference Presentations</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         ML Research & Development
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Algorithm Design, Model Optimization</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Algorithm
+                                            Design, Model Optimization</span>
                                     </span>
-                                    <span class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
+                                    <span
+                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
                                         Reinforcement Learning
-                                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">DQN, Policy Gradient, Multi-agent Systems</span>
+                                        <span
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">DQN,
+                                            Policy Gradient, Multi-agent Systems</span>
                                     </span>
                                 </div>
                             </div>
@@ -514,88 +663,118 @@
 
                     <!-- Development & AI Expertise -->
                     <div class="transform hover:scale-105 transition-all duration-300">
-                        <div class="bg-white p-8 rounded-2xl shadow-xl h-full border border-indigo-50 relative overflow-hidden">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-transparent opacity-50 rounded-bl-full"></div>
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-xl h-full border border-indigo-50 relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-transparent opacity-50 rounded-bl-full">
+                            </div>
                             <div class="relative z-10">
                                 <div class="flex items-center justify-between mb-6">
                                     <div class="text-indigo-600">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                         </svg>
                                     </div>
                                     <!-- <div class="text-sm font-medium text-gray-500">Expertise Areas</div> -->
                                 </div>
-                                <h3 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Development &amp; AI Expertise</h3>
+                                <h3
+                                    class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                    Development &amp; AI Expertise</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <!-- AI & ML Section -->
                                     <div class="space-y-6">
-                                        <h4 class="text-lg font-semibold text-gray-800 mb-4">AI &amp; Machine Learning</h4>
+                                        <h4 class="text-lg font-semibold text-gray-800 mb-4">AI &amp; Machine Learning
+                                        </h4>
                                         <div class="space-y-4">
-                                            <div class="group relative p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">Large Language Models</span>
                                                     <!-- <span class="text-indigo-600 font-semibold">Expert</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-lg">GPT</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-700 rounded-lg">BERT</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">Transformers</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-lg">GPT</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-700 rounded-lg">BERT</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">Transformers</span>
                                                 </div>
                                             </div>
-                                            <div class="group relative p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">Computer Vision</span>
                                                     <!-- <span class="text-purple-600 font-semibold">Advanced</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-700 rounded-lg">CNN</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-700 rounded-lg">Object Detection</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-700 rounded-lg">CNN</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-700 rounded-lg">Object
+                                                        Detection</span>
                                                 </div>
                                             </div>
-                                            <div class="group relative p-4 bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">MLOps & Deployment</span>
                                                     <!-- <span class="text-pink-600 font-semibold">Proficient</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-700 rounded-lg">CI/CD</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-rose-100 text-rose-700 rounded-lg">Model Serving</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-700 rounded-lg">CI/CD</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-rose-100 text-rose-700 rounded-lg">Model
+                                                        Serving</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Development Section -->
                                     <div class="space-y-6">
-                                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Development &amp; Architecture</h4>
+                                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Development &amp;
+                                            Architecture</h4>
                                         <div class="space-y-4">
-                                            <div class="group relative p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">Distributed Systems</span>
                                                     <!-- <span class="text-blue-600 font-semibold">Expert</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">Microservices</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-lg">Scalability</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">Microservices</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-lg">Scalability</span>
                                                 </div>
                                             </div>
-                                            <div class="group relative p-4 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">Cloud Architecture</span>
                                                     <!-- <span class="text-cyan-600 font-semibold">Advanced</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-lg">AWS</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">GCP</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-lg">AWS</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">GCP</span>
                                                 </div>
                                             </div>
-                                            <div class="group relative p-4 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                                            <div
+                                                class="group relative p-4 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                                                 <div class="flex items-center justify-between">
                                                     <span class="text-gray-700 font-medium">System Design</span>
                                                     <!-- <span class="text-teal-600 font-semibold">Expert</span> -->
                                                 </div>
                                                 <div class="mt-2 flex flex-wrap gap-2">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-teal-100 text-teal-700 rounded-lg">Architecture</span>
-                                                    <span class="px-2 py-1 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-lg">Performance</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-teal-100 text-teal-700 rounded-lg">Architecture</span>
+                                                    <span
+                                                        class="px-2 py-1 text-xs font-medium bg-cyan-100 text-cyan-700 rounded-lg">Performance</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -605,14 +784,22 @@
                                 <div class="mt-8 pt-6 border-t border-gray-100">
                                     <h4 class="text-sm font-medium text-gray-500 mb-4">Core Technologies</h4>
                                     <div class="flex flex-wrap gap-3">
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Python</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Golang</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-pink-50 to-pink-100 text-pink-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Rust</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">PyTorch</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50 to-cyan-100 text-cyan-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">TensorFlow</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-teal-50 to-teal-100 text-teal-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Docker</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Kubernetes</span>
-                                        <span class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">AWS</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Python</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Golang</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-pink-50 to-pink-100 text-pink-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Rust</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">PyTorch</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50 to-cyan-100 text-cyan-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">TensorFlow</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-teal-50 to-teal-100 text-teal-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Docker</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">Kubernetes</span>
+                                        <span
+                                            class="px-4 py-2 text-sm font-medium bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 rounded-xl hover:shadow-md transition-all duration-300 hover:scale-105">AWS</span>
                                     </div>
                                 </div>
                             </div>
@@ -622,22 +809,30 @@
                     <!-- Expert Skills & Technologies -->
                     <div class="transform hover:scale-105 transition-all duration-300">
                         <div class="bg-white p-8 rounded-2xl shadow-xl h-full border border-purple-50">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100 to-transparent opacity-50 rounded-bl-full"></div>
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100 to-transparent opacity-50 rounded-bl-full">
+                            </div>
                             <div class="text-purple-600 mb-6">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-6 text-gray-800">Expert Skills &amp; Technologies</h3>
-                            
+
                             <!-- Backend & Systems -->
                             <div class="mb-6">
                                 <h4 class="text-sm font-semibold text-purple-600 mb-3">Backend &amp; Systems</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Go</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Rust</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Python</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Microservices</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Go</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Rust</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Microservices</span>
                                 </div>
                             </div>
 
@@ -645,10 +840,18 @@
                             <div class="mb-6">
                                 <h4 class="text-sm font-semibold text-purple-600 mb-3">Enterprise Solutions</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">ERP Systems</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">FinTech Solutions</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Payment Systems</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Banking APIs</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">ERP
+                                        Systems</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">FinTech
+                                        Solutions</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Payment
+                                        Systems</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Banking
+                                        APIs</span>
                                 </div>
                             </div>
 
@@ -656,10 +859,15 @@
                             <div class="mb-6">
                                 <h4 class="text-sm font-semibold text-purple-600 mb-3">Frontend &amp; Mobile</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Next.js</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Flutter </span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Android</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">HTMX</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Next.js</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Flutter
+                                    </span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Android</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">HTMX</span>
                                 </div>
                             </div>
 
@@ -667,10 +875,15 @@
                             <div>
                                 <h4 class="text-sm font-semibold text-purple-600 mb-3">AI &amp; ML</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">PyTorch</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">TensorFlow</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">LLMs</span>
-                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Computer Vision</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">PyTorch</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">TensorFlow</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">LLMs</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-100 transition-colors">Computer
+                                        Vision</span>
                                 </div>
                             </div>
                         </div>
@@ -679,11 +892,15 @@
                     <!-- DevOps & Cloud -->
                     <div class="transform hover:scale-105 transition-all duration-300">
                         <div class="bg-white p-8 rounded-2xl shadow-xl h-full border border-green-50">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-100 to-transparent opacity-50 rounded-bl-full"></div>
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-100 to-transparent opacity-50 rounded-bl-full">
+                            </div>
 
                             <div class="text-green-600 mb-6">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-4 text-gray-800">DevOps &amp; Cloud</h3>
@@ -692,48 +909,60 @@
                                 <div>
                                     <h4 class="text-sm font-semibold text-gray-700 mb-3">Cloud Platforms</h4>
                                     <div class="flex flex-wrap gap-2">
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">AWS</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Expert</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">EC2</span>
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Lambda</span>
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">ECS</span>
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">GCP</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Advanced</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">GKE</span>
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Cloud Run</span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Infrastructure & Orchestration -->
                                 <div>
-                                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Infrastructure &amp; Orchestration</h4>
+                                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Infrastructure &amp;
+                                        Orchestration</h4>
                                     <div class="flex flex-wrap gap-2">
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Kubernetes</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Expert</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Docker</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Expert</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Terraform</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Advanced</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">IaC</span>
                                         </div>
                                     </div>
@@ -742,12 +971,15 @@
                                 <div>
                                     <h4 class="text-sm font-semibold text-gray-700 mb-3">Architecture Patterns</h4>
                                     <div class="flex flex-wrap gap-2">
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
                                             <span class="text-green-600 text-sm font-medium">Microservices</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Expert</span> -->
                                         </div>
-                                        <div class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
-                                            <span class="text-green-600 text-sm font-medium">Event-Driven Architecture</span>
+                                        <div
+                                            class="inline-flex items-center px-3 py-1.5 bg-green-50 rounded-full transition-all duration-300 hover:bg-green-100 hover:scale-105">
+                                            <span class="text-green-600 text-sm font-medium">Event-Driven
+                                                Architecture</span>
                                             <!-- <span class="ml-2 px-2 py-0.5 bg-green-100 rounded-full text-green-600 text-xs font-medium">Advanced</span> -->
                                         </div>
                                     </div>
@@ -760,10 +992,14 @@
                 <!-- Contact CTA -->
                 <div class="mt-16 text-center">
                     <p class="text-gray-600 mb-4">Interested in collaboration or have a project in mind?</p>
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transform hover:scale-105 transition-all duration-300">
+                    <a href="#contact"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transform hover:scale-105 transition-all duration-300">
                         Let's Connect
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
                         </svg>
                     </a>
                 </div>
@@ -1280,31 +1516,41 @@
         <section id="contact" class="relative py-32 w-full bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
             <div class="absolute inset-0 bg-gradient-to-r from-gray-50/50 to-gray-100/50 backdrop-blur-sm"></div>
             <div class="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 max-w-full lg:max-w-7xl">
-                <h2 class="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
+                <h2
+                    class="text-4xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">
                     Get in Touch
                 </h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <!-- Contact Info -->
                     <div class="space-y-10">
-                        <div class="bg-white rounded-2xl shadow-xl p-10 transform hover:scale-105 transition-all duration-300">
+                        <div
+                            class="bg-white rounded-2xl shadow-xl p-10 transform hover:scale-105 transition-all duration-300">
                             <h3 class="text-2xl font-semibold text-indigo-600 mb-6">Contact Information</h3>
                             <div class="space-y-4">
                                 <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-600">Email</p>
-                                        <a href="mailto:iam@chinmayvivek.com" class="text-indigo-600 font-medium hover:text-indigo-500">iam@chinmayvivek.com</a>
+                                        <a href="mailto:iam@chinmayvivek.com"
+                                            class="text-indigo-600 font-medium hover:text-indigo-500">iam@chinmayvivek.com</a>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
                                     <div>
@@ -1316,27 +1562,38 @@
                             <div class="mt-8">
                                 <h4 class="text-lg font-semibold text-gray-900 mb-4">Connect with me</h4>
                                 <div class="flex space-x-4">
-                                    <a href="https://github.com/chinmayvivek" class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <a href="https://github.com/chinmayvivek"
+                                        class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
                                     </a>
-                                    <a href="https://linkedin.com/in/chinmayvivek" class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <a href="https://linkedin.com/in/chinmayvivek"
+                                        class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
                                     </a>
-                                    <a href="https://twitter.com/chinmayvivek" class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                    <a href="https://twitter.com/chinmayvivek"
+                                        class="text-gray-600 hover:text-indigo-600 transform hover:scale-110 transition-all">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                        </svg>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Contact Form -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300 h-[600px] overflow-hidden">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9n-L_F7boN_3VOad3dLsXx89Pv7N8Q-Y4BoqHSAZ7WjCNvQ/viewform?embedded=true" 
-                            class="w-full h-full " 
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0">
+                    <div
+                        class="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300 h-[600px] overflow-hidden">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSd9n-L_F7boN_3VOad3dLsXx89Pv7N8Q-Y4BoqHSAZ7WjCNvQ/viewform?embedded=true"
+                            class="w-full h-full " frameborder="0" marginheight="0" marginwidth="0">
                             Loading…
                         </iframe>
                     </div>

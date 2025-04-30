@@ -427,9 +427,9 @@
                     <button @click="activeFilter = 'ai'"
                         :class="{ 'bg-indigo-600 text-white': activeFilter === 'ai', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'ai' }"
                         class="px-6 py-2 rounded-full font-medium transition-all duration-300">AI/ML</button>
-                    <button @click="activeFilter = 'web'"
-                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'web', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'web' }"
-                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">Web Dev</button>
+                    <button @click="activeFilter = 'enterprise'"
+                        :class="{ 'bg-indigo-600 text-white': activeFilter === 'enterprise', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'enterprise' }"
+                        class="px-6 py-2 rounded-full font-medium transition-all duration-300">Enterprise</button>
                     <button @click="activeFilter = 'fintech'"
                         :class="{ 'bg-indigo-600 text-white': activeFilter === 'fintech', 'bg-gray-100 text-gray-800 hover:bg-gray-200': activeFilter !== 'fintech' }"
                         class="px-6 py-2 rounded-full font-medium transition-all duration-300">FinTech</button>
@@ -437,85 +437,214 @@
 
                 <!-- Project Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div x-show="activeFilter === 'all' || activeFilter === 'ai'" x-transition
-                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-                        style="display: none;">
+                    <!-- Algorithmic Trading Platform Card -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'fintech' || activeFilter === 'ai'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                         <div class="relative overflow-hidden">
-                            <div
-                                class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
-                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
+                            <div class="h-48 bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span
-                                    class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                                <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech AI</span>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Image Recognition</h3>
-                            <p class="text-gray-600 mb-4">Deep learning model for real-time object detection and
-                                classification using TensorFlow and OpenCV.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Trading Platform</h3>
+                            <p class="text-gray-600 mb-4">Advanced algorithmic trading platform using machine learning for market prediction and automated trading strategies.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">TensorFlow</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">OpenCV</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">FastAPI</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Redis</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">View Project →</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg></a>
+                                <a href="#" class="text-green-600 hover:text-green-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project Card 2 -->
+                    <!-- Risk Assessment System Card -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'fintech' || activeFilter === 'enterprise'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">ML Risk Assessment System</h3>
+                            <p class="text-gray-600 mb-4">Enterprise-grade risk assessment platform using ML for credit scoring and fraud detection.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Rust</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">scikit-learn</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Docker</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-amber-600 hover:text-amber-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cross-Platform Mobile App Card -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'enterprise'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-violet-500 to-purple-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-violet-600 text-white px-3 py-1 rounded-full text-sm font-medium">Enterprise</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Enterprise Mobile Suite</h3>
+                            <p class="text-gray-600 mb-4">Cross-platform mobile application for enterprise data management and analytics.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Flutter</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Dart</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Firebase</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GraphQL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-violet-600 hover:text-violet-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LLM Project Card -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'ai'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Advanced LLM System</h3>
+                            <p class="text-gray-600 mb-4">Enterprise-scale language model system with custom training pipeline and deployment infrastructure.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PyTorch</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CUDA</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">AWS</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Enterprise ML Platform Card -->
+                    <div x-show="activeFilter === 'all' || activeFilter === 'enterprise'" x-transition
+                        class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Enterprise</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Cloud-Native ML Platform</h3>
+                            <p class="text-gray-600 mb-4">Scalable machine learning platform with automated model training, deployment, and monitoring.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Go</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Kubernetes</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">MLflow</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Terraform</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">View Project →</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FinTech Project Card -->
                     <div x-show="activeFilter === 'all' || activeFilter === 'fintech'"
                         class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                         <div class="relative overflow-hidden">
-                            <div
-                                class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
-                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
+                            <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
                                     </path>
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span
-                                    class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
+                                <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Crypto Trading Bot</h3>
-                            <p class="text-gray-600 mb-4">Automated cryptocurrency trading system with real-time market
-                                analysis and ML-based predictions.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Trading Platform</h3>
+                            <p class="text-gray-600 mb-4">Advanced trading system with real-time market analysis and ML-based predictions for multiple asset classes.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Go</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">TensorFlow</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">PostgreSQL</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Docker</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Redis</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">View Project →</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-600"><svg class="w-6 h-6"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg></a>
+                                <a href="#" class="text-gray-500 hover:text-gray-600">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div x-show="activeFilter === 'all' || activeFilter === 'web'"
+                    <div x-show="activeFilter === 'all' || activeFilter === 'enterprise'"
                         class="group bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                         <div class="relative overflow-hidden">
                             <div
@@ -528,8 +657,7 @@
                                 </svg>
                             </div>
                             <div class="absolute top-0 right-0 p-4">
-                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Web
-                                    Dev</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">Enterprise</span>
                             </div>
                         </div>
                         <div class="p-6">

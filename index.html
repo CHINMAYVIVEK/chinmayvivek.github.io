@@ -427,95 +427,110 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     <!-- AI/ML & Research Expertise -->
-                    <div class="transform hover:scale-105 transition-all duration-300">
-                        <div class="bg-white p-8 rounded-2xl shadow-xl h-full border border-pink-50">
-                            <div class="text-pink-600 mb-6">
-                                <div
-                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-100 to-transparent opacity-50 rounded-bl-full">
+                    <div class="transform hover:scale-105 transition-all duration-500 ease-in-out">
+                        <div class="bg-white p-8 rounded-3xl shadow-2xl h-full border-2 border-indigo-100 relative overflow-hidden backdrop-blur-sm">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 opacity-50"></div>
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-indigo-200 to-transparent opacity-20 rounded-bl-full transform rotate-12"></div>
+                            
+                            <!-- Header Section -->
+                            <div class="relative flex items-center space-x-4 mb-8">
+                                <div class="p-3 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl shadow-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
                                 </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                </svg>
+                                <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">AI/ML & Research Expertise</h3>
                             </div>
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">AI/ML &amp; Research Expertise</h3>
-                            <div class="space-y-4">
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Deep Learning Architecture
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">CNN,
-                                            RNN, GAN, VAE</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        LLM Architecture
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GPT,
-                                            BERT, T5, LLaMA</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Computer Vision
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Object
-                                            Detection, Segmentation, Tracking</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        NLP & Text Analytics
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sentiment
-                                            Analysis, NER, Text Generation</span>
-                                    </span>
+
+                            <!-- Expertise Grid -->
+                            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Deep Learning & LLM Section -->
+                                <div class="expertise-card p-4 rounded-2xl bg-gradient-to-br from-white to-indigo-50 shadow-md hover:shadow-xl transition-all duration-300">
+                                    <h4 class="text-lg font-semibold text-indigo-700 mb-3">Deep Learning & LLMs</h4>
+                                    <div class="space-y-2">
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">LLM Fine-tuning</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">PEFT, LoRA, QLoRA, Instruction Fine-tuning, Domain Adaptation</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">Model Architecture</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">Transformers, CNN, RNN, GAN, VAE, Attention Mechanisms</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">Model Training</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">Distributed Training, Mixed Precision, Gradient Accumulation</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        MLOps & Pipeline Design
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Model
-                                            Deployment, Monitoring, A/B Testing</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Time Series Analysis
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Forecasting,
-                                            Anomaly Detection, LSTM</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Generative AI
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Text-to-Image,
-                                            Voice Synthesis, Music Generation</span>
-                                    </span>
+
+                                <!-- RAG & Knowledge Systems -->
+                                <div class="expertise-card p-4 rounded-2xl bg-gradient-to-br from-white to-purple-50 shadow-md hover:shadow-xl transition-all duration-300">
+                                    <h4 class="text-lg font-semibold text-purple-700 mb-3">RAG & Knowledge Systems</h4>
+                                    <div class="space-y-2">
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-purple-600">●</span>
+                                            <span class="text-gray-700">RAG Pipeline</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-purple-600 text-white text-xs rounded-lg mb-2 z-10">Vector Stores, Semantic Search, Document Processing, Hybrid Search</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-purple-600">●</span>
+                                            <span class="text-gray-700">Knowledge Graphs</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-purple-600 text-white text-xs rounded-lg mb-2 z-10">Entity Extraction, Relationship Mapping, Graph Embeddings</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-purple-600">●</span>
+                                            <span class="text-gray-700">Context Engineering</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-purple-600 text-white text-xs rounded-lg mb-2 z-10">Prompt Engineering, Context Window Optimization, Retrieval Strategies</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Research Publications
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Peer-reviewed
-                                            Papers, Conference Presentations</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        ML Research & Development
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Algorithm
-                                            Design, Model Optimization</span>
-                                    </span>
-                                    <span
-                                        class="group relative px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors cursor-pointer">
-                                        Reinforcement Learning
-                                        <span
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-pink-600 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">DQN,
-                                            Policy Gradient, Multi-agent Systems</span>
-                                    </span>
+
+                                <!-- AI Agents & Systems -->
+                                <div class="expertise-card p-4 rounded-2xl bg-gradient-to-br from-white to-pink-50 shadow-md hover:shadow-xl transition-all duration-300">
+                                    <h4 class="text-lg font-semibold text-pink-700 mb-3">AI Agents & Systems</h4>
+                                    <div class="space-y-2">
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-pink-600">●</span>
+                                            <span class="text-gray-700">Agent Architecture</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-pink-600 text-white text-xs rounded-lg mb-2 z-10">Multi-Agent Systems, Tool Use, Planning, Reasoning</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-pink-600">●</span>
+                                            <span class="text-gray-700">Autonomous Systems</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-pink-600 text-white text-xs rounded-lg mb-2 z-10">Decision Making, Task Planning, Memory Systems</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-pink-600">●</span>
+                                            <span class="text-gray-700">Agent Frameworks</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-pink-600 text-white text-xs rounded-lg mb-2 z-10">LangChain, AutoGPT, Agent Protocols, Tool Integration</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Data & MLOps -->
+                                <div class="expertise-card p-4 rounded-2xl bg-gradient-to-br from-white to-indigo-50 shadow-md hover:shadow-xl transition-all duration-300">
+                                    <h4 class="text-lg font-semibold text-indigo-700 mb-3">Data & MLOps</h4>
+                                    <div class="space-y-2">
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">Data Pipeline</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">ETL, Stream Processing, Data Validation, Quality Checks</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">Model Operations</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">Model Serving, A/B Testing, Monitoring, Version Control</div>
+                                        </div>
+                                        <div class="group relative inline-flex items-center space-x-2 w-full p-2 rounded-lg hover:bg-white transition-all duration-200">
+                                            <span class="text-indigo-600">●</span>
+                                            <span class="text-gray-700">Infrastructure</span>
+                                            <div class="hidden group-hover:block absolute bottom-full left-0 w-64 p-2 bg-indigo-600 text-white text-xs rounded-lg mb-2 z-10">Kubernetes, Docker, CI/CD, Cloud Deployment</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

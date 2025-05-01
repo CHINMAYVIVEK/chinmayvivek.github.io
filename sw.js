@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chinmay-vivek-v1';
+const CACHE_NAME = 'chinmay-vivek-v1.1.0';
 const urlsToCache = [
   '/',
   '/index.html',

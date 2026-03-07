@@ -1,0 +1,126 @@
+[
+  {
+    "year": "2025",
+    "role": "Staff Software Engineer",
+    "company": "Kaseya",
+    "period": "June 2025 - Oct 2025",
+    "location": "Bangalore, India (Remote)",
+    "points": [
+      "Development and implementation of comprehensive business solutions in the FinTech domain"
+    ],
+    "skills": ["Payments", "Microservices", "Golang", "Rust"],
+    "color": "purple"
+  },
+  {
+    "year": "2024",
+    "role": "Senior Software Engineer",
+    "company": "Wissen Techology",
+    "period": "Sept 2024 - May 2025",
+    "location": "Bangalore, India (Remote)",
+    "points": [
+      "Development and implementation of comprehensive business solutions in the FinTech domain"
+    ],
+    "skills": ["Microservices", "AI/ML", "Leadership", "Golang", "Rust"],
+    "color": "pink"
+  },
+  {
+    "year": "2023",
+    "role": "Lead Software Engineer",
+    "company": "BlackBuck",
+    "period": "Nov 2023 - Feb 2024",
+    "location": "Bangalore, India (Remote)",
+    "points": [
+      "Lead in the design, development, and implementation of business solutions and production communication materials",
+      "Design and development of business solutions and provide counsel on all aspects of the project"
+    ],
+    "skills": [
+      "Payments",
+      "Microservices",
+      "AI/ML",
+      "FinTech",
+      "Leadership",
+      "Lua",
+      "Golang",
+      "Rust"
+    ],
+    "color": "indigo"
+  },
+  {
+    "year": "2023",
+    "role": "Senior Software Engineer",
+    "company": "Freecharge",
+    "period": "May 2023 - Sep 2023",
+    "location": "Mumbai, India (Remote)",
+    "points": [
+      "Development and implementation of comprehensive business solutions in the FinTech domain"
+    ],
+    "skills": ["Payments", "Microservices", "Golang", "Rust"],
+    "color": "purple"
+  },
+  {
+    "year": "2022",
+    "role": "Senior Software Engineer",
+    "company": "JustDial",
+    "period": "Feb 2022 - May 2023",
+    "location": "Bangalore, India",
+    "points": [
+      "Led design and development of business solutions and production communication materials",
+      "Delegated tasks to 7 team members and provided counsel on all project aspects",
+      "Supervised assessment of software design and development materials for quality and accuracy"
+    ],
+    "skills": [
+      "Team Lead",
+      "System Design",
+      "Python",
+      "Golang",
+      "PHP",
+      "Rust",
+      "Microservices"
+    ],
+    "color": "pink"
+  },
+  {
+    "year": "2021",
+    "role": "Software Developer",
+    "company": "Tattva Foundation",
+    "period": "Sep 2021 - Jan 2022",
+    "location": "Patna (OnSite)",
+    "points": [
+      "Led the development of a comprehensive Financial ERP system for JiVIKA, a Bihar Government initiative, utilizing Python, PostgreSQL, XML-RPC, and AWS infrastructure",
+      "Architected and implemented enterprise-grade solutions using Odoo framework, ensuring scalability and robust financial management capabilities",
+      "Conducted comprehensive requirement analysis and collaborated with stakeholders to deliver tailored solutions aligned with government sector needs"
+    ],
+    "skills": [
+      "Python",
+      "Web Dev",
+      "Odoo",
+      "PHP",
+      "Microservices",
+      "Consulting"
+    ],
+    "color": "indigo"
+  },
+  {
+    "year": "2013",
+    "role": "Software Developer",
+    "company": "Freelancer",
+    "period": "April 2013 - Sept 2021",
+    "location": "Remote",
+    "points": [
+      "Developed numerous websites and software solutions for schools, hospitals, departmental stores, publications, and advertisements",
+      "Managed up to 5 projects or tasks simultaneously while under pressure",
+      "Recommended and consulted with clients on the most appropriate software solutions"
+    ],
+    "skills": [
+      "Full Stack",
+      "Web Dev",
+      "Consulting",
+      "Python",
+      "Golang",
+      "PHP",
+      "Odoo",
+      "Microservices"
+    ],
+    "color": "purple"
+  }
+]

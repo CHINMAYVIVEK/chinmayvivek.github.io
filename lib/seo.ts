@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://chinmayvivek.com";
+/** Set at build time: GitHub Pages → github.io, Docker → chinmayvivek.com */
+export const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+).replace(/\/$/, "");
 
 export const siteConfig = {
   name: "Chinmay Vivek",

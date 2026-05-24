@@ -19,6 +19,8 @@ CMD ["sh", "-c", "bun run compress:images && bunx next dev -H 0.0.0.0 -p 3000"]
 # --- Production build (static export → out/) ---
 FROM base AS builder
 
+ENV NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com
+
 COPY next.config.ts tsconfig.json postcss.config.js tailwind.config.js next-env.d.ts ./
 COPY app ./app
 COPY components ./components

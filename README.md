@@ -31,18 +31,30 @@ Runs `scripts/compress-images.ts` (Bun.Image) then `next build`. Static site out
 bun run start   # serves production build (after export, use a static server for `out/`)
 ```
 
-## Deploy (GitHub Pages)
+## Deploy
 
-This is a static Next.js export. Do **not** use **/root** (that serves `README.md` via Jekyll).
+Two independent deployments from the same repo. No redirects between them.
+
+### GitHub Pages → [chinmayvivek.github.io](https://chinmayvivek.github.io)
+
+Static export published to the `docs/` folder by CI.
 
 1. Push to `main` (include `bun.lock`).
-2. **Settings → Pages → Build and deployment → Deploy from a branch**
-3. Branch: **main**, folder: **/docs** (not /root)
-4. The workflow builds the site and commits the output to `docs/` with `.nojekyll` (Jekyll disabled).
+2. **Settings → Pages → Deploy from a branch** → **main** → **/docs** (not /root).
+3. Do **not** set a custom domain on GitHub Pages.
+4. Workflow sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.github.io` at build time.
 
-After the first push, run **Actions → Deploy to GitHub Pages → Run workflow** if `docs/` is not populated yet.
+Run **Actions → Deploy to GitHub Pages → Run workflow** once if `docs/` is empty.
 
-Custom domain: `public/CNAME` → `chinmayvivek.com`.
+### Docker → [chinmayvivek.com](https://chinmayvivek.com)
+
+Production image serves the static `out/` folder with nginx on port 8080.
+
+```bash
+docker compose up web --build
+```
+
+Build sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com`. Point DNS for `chinmayvivek.com` at this host only—not at GitHub Pages.
 
 ## Project structure
 

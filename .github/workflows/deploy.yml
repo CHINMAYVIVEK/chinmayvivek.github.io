@@ -1,6 +1,6 @@
-# Builds the Next.js static export and publishes it to the /docs folder on main.
-# GitHub Pages setting: Deploy from a branch → main → /docs (not /root).
-# .nojekyll disables Jekyll so README.md at repo root is not used as the site.
+# GitHub Pages only → https://chinmayvivek.github.io
+# Do not attach a custom domain here; chinmayvivek.com is deployed separately via Docker.
+# Pages setting: Deploy from a branch → main → /docs (not /root). .nojekyll disables Jekyll.
 
 name: Deploy to GitHub Pages
 
@@ -39,6 +39,7 @@ jobs:
         env:
           NEXT_TELEMETRY_DISABLED: 1
           NODE_ENV: production
+          NEXT_PUBLIC_SITE_URL: https://chinmayvivek.github.io
         run: |
           bunx next telemetry disable
           bun run scripts/compress-images.ts || echo "::warning::Image compression skipped; using committed WebP assets"
@@ -54,10 +55,10 @@ jobs:
           rm -rf docs
           mkdir -p docs
           cp -r out/. docs/
+          rm -f docs/CNAME
           touch docs/.nojekyll
           test -f docs/index.html
-          test -f docs/CNAME || cp public/CNAME docs/CNAME
-          echo "docs/ ready for GitHub Pages (/docs folder)"
+          echo "docs/ ready for https://chinmayvivek.github.io"
 
       - name: Commit and push docs/
         uses: stefanzweifel/git-auto-commit-action@v5

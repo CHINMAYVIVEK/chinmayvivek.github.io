@@ -33,9 +33,14 @@ bun run start   # serves production build (after export, use a static server for
 
 ## Deploy (GitHub Pages)
 
+This is a static Next.js export. Do **not** use **/root** (that serves `README.md` via Jekyll).
+
 1. Push to `main` (include `bun.lock`).
-2. **Settings → Pages → Source: GitHub Actions**.
-3. Workflow uploads the `out/` directory.
+2. **Settings → Pages → Build and deployment → Deploy from a branch**
+3. Branch: **main**, folder: **/docs** (not /root)
+4. The workflow builds the site and commits the output to `docs/` with `.nojekyll` (Jekyll disabled).
+
+After the first push, run **Actions → Deploy to GitHub Pages → Run workflow** if `docs/` is not populated yet.
 
 Custom domain: `public/CNAME` → `chinmayvivek.com`.
 

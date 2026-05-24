@@ -1,25 +1,31 @@
+# Builds the Next.js static export and publishes it to the /docs folder on main.
+# GitHub Pages setting: Deploy from a branch → main → /docs (not /root).
+# .nojekyll disables Jekyll so README.md at repo root is not used as the site.
+
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "docs/**"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: pages-docs
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -38,26 +44,26 @@ jobs:
           bun run scripts/compress-images.ts || echo "::warning::Image compression skipped; using committed WebP assets"
           bunx next build
 
-      - name: Prepare GitHub Pages artifact
+      - name: Verify build output
         run: |
-          test -f out/index.html || (echo "Missing out/index.html — build failed" && exit 1)
-          cp public/.nojekyll out/.nojekyll
-          test -f out/CNAME || cp public/CNAME out/CNAME
-          echo "Pages artifact contents:"
+          test -f out/index.html || (echo "Build failed: out/index.html missing" && exit 1)
           ls -la out/
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
+      - name: Publish to docs/
+        run: |
+          rm -rf docs
+          mkdir -p docs
+          cp -r out/. docs/
+          touch docs/.nojekyll
+          test -f docs/index.html
+          test -f docs/CNAME || cp public/CNAME docs/CNAME
+          echo "docs/ ready for GitHub Pages (/docs folder)"
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and push docs/
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "chore: deploy site to docs/"
+          file_pattern: docs/**
+          branch: main

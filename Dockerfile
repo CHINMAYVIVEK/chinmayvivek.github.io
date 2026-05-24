@@ -29,7 +29,7 @@ COPY public ./public
 COPY scripts ./scripts
 
 RUN bunx next telemetry disable \
-  && bun run scripts/compress-images.ts \
+  && (bun run scripts/compress-images.ts || true) \
   && bunx next build
 
 # --- Production runtime: nginx only, no Node/Bun in final image ---

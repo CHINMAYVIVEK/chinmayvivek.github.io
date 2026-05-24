@@ -1,0 +1,11 @@
+node_modules
+out
+.next
+.git
+.github
+.cursor
+*.md
+.env*
+.DS_Store
+npm-debug.log*
+bun-debug.log*

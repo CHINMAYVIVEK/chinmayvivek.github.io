@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun run compress:images && next dev",
-    "build": "NEXT_TELEMETRY_DISABLED=1 bun run scripts/compress-images.ts && next build",
+    "build": "next build",
+    "build:local": "bun run compress:images && next build",
     "start": "next start",
     "lint": "next lint",
     "compress:images": "bun run scripts/compress-images.ts"

@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://chinmayvivek.github.io/sitemap.xml

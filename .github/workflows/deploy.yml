@@ -1,31 +1,30 @@
 # GitHub Pages only → https://chinmayvivek.github.io
-# Do not attach a custom domain here; chinmayvivek.com is deployed separately via Docker.
-# Pages setting: Deploy from a branch → main → /docs (not /root). .nojekyll disables Jekyll.
+# Deploys the build artifact via GitHub Actions (no commits back to the repo).
+# Pages setting: Source → GitHub Actions (not "Deploy from branch").
+# chinmayvivek.com is deployed separately via Docker — do not add a custom domain here.
 
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "docs/**"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: pages-docs
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -45,26 +44,24 @@ jobs:
           bun run scripts/compress-images.ts || echo "::warning::Image compression skipped; using committed WebP assets"
           bunx next build
 
-      - name: Verify build output
+      - name: Prepare Pages artifact
         run: |
           test -f out/index.html || (echo "Build failed: out/index.html missing" && exit 1)
-          ls -la out/
+          touch out/.nojekyll
+          rm -f out/CNAME
 
-      - name: Publish to docs/
-        run: |
-          rm -rf docs
-          mkdir -p docs
-          cp -r out/. docs/
-          rm -f docs/CNAME
-          touch docs/.nojekyll
-          test -f docs/index.html
-          echo "docs/ ready for https://chinmayvivek.github.io"
-
-      - name: Commit and push docs/
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          commit_user_name: github-actions[bot]
-          commit_user_email: github-actions[bot]@users.noreply.github.com
-          commit_message: "chore: deploy site to docs/"
-          file_pattern: docs/**
-          branch: main
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

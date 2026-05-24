@@ -37,14 +37,14 @@ Two independent deployments from the same repo. No redirects between them.
 
 ### GitHub Pages → [chinmayvivek.github.io](https://chinmayvivek.github.io)
 
-Static export published to the `docs/` folder by CI.
+CI builds the static export and deploys it as a GitHub Actions artifact. **Nothing is committed back to the repo** by the bot.
 
 1. Push to `main` (include `bun.lock`).
-2. **Settings → Pages → Deploy from a branch** → **main** → **/docs** (not /root).
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions** (not "Deploy from a branch").
 3. Do **not** set a custom domain on GitHub Pages.
 4. Workflow sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.github.io` at build time.
 
-Run **Actions → Deploy to GitHub Pages → Run workflow** once if `docs/` is empty.
+The `docs/` folder is not used; built output stays in CI only (`out/` is gitignored).
 
 ### Docker → [chinmayvivek.com](https://chinmayvivek.com)
 

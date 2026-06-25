@@ -9,23 +9,32 @@ export type ProjectIcon =
   | "crypto"
   | "analytics"
   | "lms"
-  | "school";
+  | "school"
+  | "sentinel-vision";
+
+export interface ProjectTheme {
+  header: string;
+  fg?: string;
+  inlineBg?: string;
+}
 
 export interface Project {
   id: string;
   title: string;
   description: string;
   category: Exclude<ProjectCategory, "all">[];
-  image: {
-    gradient: { from: string; to: string };
-    icon: ProjectIcon;
-  };
-  tag: { text: string; color: string };
+  image: { icon: ProjectIcon };
+  tag: { text: string };
+  theme: ProjectTheme;
   technologies: string[];
   links: { demo: string; github: string };
 }
 
-export type TimelineColor = "purple" | "pink" | "indigo";
+export interface TimelineTheme {
+  accent: string;
+  skillBg?: string;
+  icon?: string;
+}
 
 export interface TimelineEntry {
   year: string;
@@ -35,7 +44,7 @@ export interface TimelineEntry {
   location: string;
   points: string[];
   skills: string[];
-  color: TimelineColor;
+  theme: TimelineTheme;
 }
 
 export interface SkillGroup {

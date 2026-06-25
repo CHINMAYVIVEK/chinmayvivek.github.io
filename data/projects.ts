@@ -2,16 +2,29 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "sentinel-vision",
+    title: "SentinelVision",
+    description:
+      "A high-performance real-time person and object tracking system built in Rust.",
+    category: ["enterprise", "ai"],
+    image: { icon: "sentinel-vision" },
+    tag: { text: "Enterprise AI" },
+    theme: { header: "#3d4a5c", fg: "#f2f4f7", inlineBg: "#e9edf2" },
+    technologies: ["Rust", "OpenCV", "ONNX", "SORT"],
+    links: {
+      demo: "https://github.com/CHINMAYVIVEK/SentinelVision",
+      github: "https://github.com/CHINMAYVIVEK/SentinelVision",
+    },
+  },
+  {
     id: "trading-platform",
     title: "AI-Powered Trading Platform",
     description:
       "Algorithmic trading platform with machine learning market signals, Python, TensorFlow, FastAPI, and Redis for fintech automation.",
     category: ["fintech", "ai"],
-    image: {
-      gradient: { from: "green-500", to: "emerald-500" },
-      icon: "trading",
-    },
-    tag: { text: "FinTech AI", color: "green-600" },
+    image: { icon: "trading" },
+    tag: { text: "FinTech AI" },
+    theme: { header: "#1c4d5c" },
     technologies: ["Python", "TensorFlow", "FastAPI", "Redis"],
     links: { demo: "#", github: "#" },
   },
@@ -21,11 +34,9 @@ export const projects: Project[] = [
     description:
       "Credit scoring and fraud detection ML service built with Rust, scikit-learn, PostgreSQL, and Docker for banking workflows.",
     category: ["fintech", "enterprise"],
-    image: {
-      gradient: { from: "amber-500", to: "orange-500" },
-      icon: "risk",
-    },
-    tag: { text: "FinTech", color: "amber-600" },
+    image: { icon: "risk" },
+    tag: { text: "FinTech" },
+    theme: { header: "#3d4f3a", fg: "#f4f6f0", inlineBg: "#e8efe4" },
     technologies: ["Rust", "scikit-learn", "PostgreSQL", "Docker"],
     links: { demo: "#", github: "#" },
   },
@@ -35,11 +46,9 @@ export const projects: Project[] = [
     description:
       "Cross-platform enterprise mobile app for field data capture and analytics using Flutter, Firebase, and GraphQL.",
     category: ["enterprise"],
-    image: {
-      gradient: { from: "violet-500", to: "purple-500" },
-      icon: "mobile",
-    },
-    tag: { text: "Enterprise", color: "violet-600" },
+    image: { icon: "mobile" },
+    tag: { text: "Enterprise" },
+    theme: { header: "var(--ink)" },
     technologies: ["Flutter", "Dart", "Firebase", "GraphQL"],
     links: { demo: "#", github: "#" },
   },
@@ -49,11 +58,9 @@ export const projects: Project[] = [
     description:
       "Custom LLM training and serving stack with PyTorch, CUDA, and AWS for enterprise NLP and generative AI workloads.",
     category: ["ai"],
-    image: {
-      gradient: { from: "indigo-500", to: "purple-500" },
-      icon: "llm",
-    },
-    tag: { text: "AI/ML", color: "indigo-600" },
+    image: { icon: "llm" },
+    tag: { text: "AI/ML" },
+    theme: { header: "#2a3f6e", fg: "#f0f2f8", inlineBg: "#e8ecf5" },
     technologies: ["Python", "PyTorch", "CUDA", "AWS"],
     links: { demo: "#", github: "#" },
   },
@@ -63,11 +70,9 @@ export const projects: Project[] = [
     description:
       "Kubernetes ML platform with Go, MLflow, and Terraform for automated model training, deployment, and monitoring.",
     category: ["enterprise"],
-    image: {
-      gradient: { from: "blue-500", to: "cyan-500" },
-      icon: "cloudMl",
-    },
-    tag: { text: "Enterprise", color: "blue-600" },
+    image: { icon: "cloudMl" },
+    tag: { text: "Enterprise" },
+    theme: { header: "#1a4d5c" },
     technologies: ["Go", "Kubernetes", "MLflow", "Terraform"],
     links: { demo: "#", github: "#" },
   },
@@ -77,11 +82,9 @@ export const projects: Project[] = [
     description:
       "Automated cryptocurrency trading bot in Go with real-time market analysis, PostgreSQL, and Redis.",
     category: ["fintech"],
-    image: {
-      gradient: { from: "pink-500", to: "rose-500" },
-      icon: "crypto",
-    },
-    tag: { text: "FinTech", color: "pink-600" },
+    image: { icon: "crypto" },
+    tag: { text: "FinTech" },
+    theme: { header: "#5c3d2e", fg: "#faf3ee", inlineBg: "#f5ebe4" },
     technologies: ["Go", "Docker", "PostgreSQL", "Redis"],
     links: { demo: "#", github: "#" },
   },
@@ -91,11 +94,9 @@ export const projects: Project[] = [
     description:
       "Real-time analytics dashboard in Rust and Next.js with PostgreSQL and Redis for streaming data visualization.",
     category: ["enterprise"],
-    image: {
-      gradient: { from: "blue-500", to: "cyan-500" },
-      icon: "analytics",
-    },
-    tag: { text: "Enterprise", color: "blue-700" },
+    image: { icon: "analytics" },
+    tag: { text: "Enterprise" },
+    theme: { header: "#3d4a5c", fg: "#f2f4f7", inlineBg: "#e9edf2" },
     technologies: ["Rust", "Docker", "PostgreSQL", "Redis", "Next.Js"],
     links: { demo: "#", github: "#" },
   },
@@ -105,11 +106,9 @@ export const projects: Project[] = [
     description:
       "Open source learning management system (LMS) for live online classes. Go, PostgreSQL, Docker, and HTMX for courses and attendance.",
     category: ["enterprise"],
-    image: {
-      gradient: { from: "blue-500", to: "cyan-500" },
-      icon: "lms",
-    },
-    tag: { text: "Enterprise", color: "blue-700" },
+    image: { icon: "lms" },
+    tag: { text: "Enterprise" },
+    theme: { header: "#2d5a68" },
     technologies: ["Go", "Docker", "PostgreSQL", "HTMX"],
     links: {
       demo: "https://github.com/CHINMAYVIVEK/liveClass",
@@ -122,11 +121,9 @@ export const projects: Project[] = [
     description:
       "School administration system in Go and PostgreSQL for admissions, academics, fees, and reporting.",
     category: ["enterprise"],
-    image: {
-      gradient: { from: "blue-500", to: "cyan-500" },
-      icon: "school",
-    },
-    tag: { text: "Enterprise", color: "blue-700" },
+    image: { icon: "school" },
+    tag: { text: "Enterprise" },
+    theme: { header: "#4a4458", fg: "#f5f3f8", inlineBg: "#edeaf2" },
     technologies: ["Go", "Docker", "PostgreSQL"],
     links: {
       demo: "https://github.com/CHINMAYVIVEK/SwiftSchool",

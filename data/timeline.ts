@@ -1,4 +1,18 @@
-import type { TimelineEntry } from "./types";
+import type { TimelineEntry, TimelineTheme } from "./types";
+
+const teal: TimelineTheme = {
+  accent: "#2d5a68",
+  skillBg: "var(--accent-soft)",
+};
+const tealMid: TimelineTheme = {
+  accent: "#3d6b7a",
+  skillBg: "var(--accent-soft)",
+};
+const ink: TimelineTheme = {
+  accent: "var(--ink)",
+  skillBg: "var(--paper-muted)",
+  icon: "var(--muted)",
+};
 
 export const timeline: TimelineEntry[] = [
   {
@@ -11,8 +25,16 @@ export const timeline: TimelineEntry[] = [
       "Engineered and optimized Endpoint Detection and Response (EDR) systems for faster monitoring and clearer security reports.",
       "Led a backend engineering team on API design and ML model deployment, improving system reliability and development efficiency.",
     ],
-    skills: ["Python", "Microservices", "Golang", "Rust", "AI/ML", "LLM", "Lamma"],
-    color: "purple",
+    skills: [
+      "Python",
+      "Microservices",
+      "Golang",
+      "Rust",
+      "AI/ML",
+      "LLM",
+      "Lamma",
+    ],
+    theme: teal,
   },
   {
     year: "2024",
@@ -24,8 +46,17 @@ export const timeline: TimelineEntry[] = [
       "Engineered AI/ML solutions for unstructured data (text, audio, image) using NLP, RAG, and LLMs (LLaMA 2, GPT-3.5, BART) via Hugging Face and OpenAI, ensuring data privacy compliance.",
       "Built automated data pipelines from APIs, Confluence, CSVs, and databases, improving QA system accuracy by 20% through cleaning, preprocessing, and machine unlearning.",
     ],
-    skills: ["Microservices", "AI/ML", "Leadership", "Golang", "Rust", "CV", "Lamma-2", "RAG"],
-    color: "pink",
+    skills: [
+      "Microservices",
+      "AI/ML",
+      "Leadership",
+      "Golang",
+      "Rust",
+      "CV",
+      "Lamma-2",
+      "RAG",
+    ],
+    theme: ink,
   },
   {
     year: "2023",
@@ -49,7 +80,7 @@ export const timeline: TimelineEntry[] = [
       "Rust",
       "PyTorch",
     ],
-    color: "indigo",
+    theme: tealMid,
   },
   {
     year: "2023",
@@ -75,7 +106,7 @@ export const timeline: TimelineEntry[] = [
       "Predictive Analytics",
       "Recommendation Engines",
     ],
-    color: "purple",
+    theme: teal,
   },
   {
     year: "2022",
@@ -88,8 +119,16 @@ export const timeline: TimelineEntry[] = [
       "Delegated tasks to 7 team members and provided counsel on all project aspects",
       "Supervised assessment of software design and development materials for quality and accuracy",
     ],
-    skills: ["Team Lead", "System Design", "Python", "Golang", "PHP", "Rust", "Microservices"],
-    color: "pink",
+    skills: [
+      "Team Lead",
+      "System Design",
+      "Python",
+      "Golang",
+      "PHP",
+      "Rust",
+      "Microservices",
+    ],
+    theme: ink,
   },
   {
     year: "2021",
@@ -103,7 +142,7 @@ export const timeline: TimelineEntry[] = [
       "Ran requirements workshops with government stakeholders and shipped releases on a fixed delivery schedule",
     ],
     skills: ["Python", "Web Dev", "Odoo", "PHP", "Microservices", "Consulting"],
-    color: "indigo",
+    theme: tealMid,
   },
   {
     year: "2013",
@@ -116,7 +155,16 @@ export const timeline: TimelineEntry[] = [
       "Managed up to 5 projects or tasks simultaneously while under pressure",
       "Recommended and consulted with clients on the most appropriate software solutions",
     ],
-    skills: ["Full Stack", "Web Dev", "Consulting", "Python", "Golang", "PHP", "Odoo", "Microservices"],
-    color: "purple",
+    skills: [
+      "Full Stack",
+      "Web Dev",
+      "Consulting",
+      "Python",
+      "Golang",
+      "PHP",
+      "Odoo",
+      "Microservices",
+    ],
+    theme: teal,
   },
 ];

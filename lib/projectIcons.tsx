@@ -97,6 +97,21 @@ const paths: Record<ProjectIcon, ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 13.5V21" />
     </>
   ),
+  "sentinel-vision": (
+    <>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5M16.5 20.25H18A2.25 2.25 0 0020.25 18v-1.5M7.5 20.25H6A2.25 2.25 0 003.75 18v-1.5"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 15a3 3 0 100-6 3 3 0 000 6z"
+      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6M9 12h6" />
+    </>
+  ),
 };
 
 type ProjectIconSvgProps = {

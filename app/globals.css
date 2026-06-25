@@ -344,6 +344,47 @@ section.visible {
   flex-shrink: 0;
 }
 
+/* Timeline cards: theme vars set per entry from data/timeline.ts */
+.timeline-entry {
+  --timeline-accent: var(--accent);
+  --timeline-icon: var(--timeline-accent);
+  --timeline-skill-bg: var(--accent-soft);
+  --timeline-skill-fg: var(--timeline-accent);
+}
+
+.timeline-entry__dot {
+  background: var(--timeline-accent);
+}
+
+.timeline-entry__line {
+  background: color-mix(in srgb, var(--timeline-accent) 25%, transparent);
+}
+
+.timeline-entry__card {
+  border-left-color: var(--timeline-accent);
+}
+
+.timeline-entry__badge {
+  background: var(--timeline-accent);
+}
+
+.timeline-entry__title {
+  color: var(--timeline-accent);
+}
+
+.timeline-entry__icon {
+  color: var(--timeline-icon);
+}
+
+.timeline-entry__skill {
+  background: var(--timeline-skill-bg);
+  color: var(--timeline-skill-fg);
+}
+
+.timeline-entry .site-bullet {
+  background: var(--timeline-accent);
+}
+
 /* —— Progress bar —— */
 .site-progress {
   height: 4px;
@@ -636,70 +677,15 @@ section.visible {
   }
 }
 
-/* Project cards: complementary header / foreground pairs */
+/* Project cards: theme vars set per card from data/projects.ts */
 .project-card {
   --project-header-bg: var(--accent);
-  --project-header-fg: #f6f4f0;
-  --project-header-icon-bg: rgba(246, 244, 240, 0.18);
-  --project-header-icon-border: rgba(246, 244, 240, 0.38);
+  --project-header-fg: var(--paper);
+  --project-inline-icon-fg: var(--project-header-bg);
+  --project-inline-icon-bg: color-mix(in srgb, var(--project-header-bg) 12%, var(--paper));
+  --project-header-icon-bg: color-mix(in srgb, var(--project-header-fg) 18%, transparent);
+  --project-header-icon-border: color-mix(in srgb, var(--project-header-fg) 38%, transparent);
   --project-header-tag-bg: rgba(15, 15, 16, 0.55);
-  --project-inline-icon-bg: var(--accent-soft);
-  --project-inline-icon-fg: var(--accent);
-}
-
-.project-card[data-theme="trading-platform"] {
-  --project-header-bg: #1c4d5c;
-  --project-inline-icon-fg: #1c4d5c;
-}
-
-.project-card[data-theme="risk-assessment"] {
-  --project-header-bg: #3d4f3a;
-  --project-header-fg: #f4f6f0;
-  --project-inline-icon-bg: #e8efe4;
-  --project-inline-icon-fg: #3d4f3a;
-}
-
-.project-card[data-theme="mobile-suite"] {
-  --project-header-bg: #0f0f10;
-  --project-inline-icon-fg: #0f0f10;
-}
-
-.project-card[data-theme="llm-system"] {
-  --project-header-bg: #2a3f6e;
-  --project-header-fg: #f0f2f8;
-  --project-inline-icon-bg: #e8ecf5;
-  --project-inline-icon-fg: #2a3f6e;
-}
-
-.project-card[data-theme="ml-platform"] {
-  --project-header-bg: #1a4d5c;
-  --project-inline-icon-fg: #1a4d5c;
-}
-
-.project-card[data-theme="crypto-trading-bot"] {
-  --project-header-bg: #5c3d2e;
-  --project-header-fg: #faf3ee;
-  --project-inline-icon-bg: #f5ebe4;
-  --project-inline-icon-fg: #5c3d2e;
-}
-
-.project-card[data-theme="real-time-analytics-dashboard"] {
-  --project-header-bg: #3d4a5c;
-  --project-header-fg: #f2f4f7;
-  --project-inline-icon-bg: #e9edf2;
-  --project-inline-icon-fg: #3d4a5c;
-}
-
-.project-card[data-theme="live-class"] {
-  --project-header-bg: #2d5a68;
-  --project-inline-icon-fg: #2d5a68;
-}
-
-.project-card[data-theme="swift-school"] {
-  --project-header-bg: #4a4458;
-  --project-header-fg: #f5f3f8;
-  --project-inline-icon-bg: #edeaf2;
-  --project-inline-icon-fg: #4a4458;
 }
 
 .project-card__header {

@@ -1,10 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { projects } from "@/data/projects";
-import type { Project, ProjectCategory } from "@/data/types";
+import type { Project, ProjectCategory, ProjectTheme } from "@/data/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProjectIconSvg } from "@/lib/projectIcons";
+
+function projectCardStyle(theme: ProjectTheme): CSSProperties {
+  const vars: Record<string, string> = { "--project-header-bg": theme.header };
+  if (theme.fg) vars["--project-header-fg"] = theme.fg;
+  if (theme.inlineBg) vars["--project-inline-icon-bg"] = theme.inlineBg;
+  return vars as CSSProperties;
+}
 
 const filters: { id: ProjectCategory; label: string }[] = [
   { id: "all", label: "All" },
@@ -18,7 +25,10 @@ function ProjectCard({ project }: { project: Project }) {
   const hasGithub = project.links.github && project.links.github !== "#";
 
   return (
-    <article className="site-card project-card overflow-hidden group" data-theme={project.id}>
+    <article
+      className="site-card project-card overflow-hidden group"
+      style={projectCardStyle(project.theme)}
+    >
       <div className="project-card__header relative h-44">
         <div className="project-card__header-grid" aria-hidden />
         <div className="project-card__header-glow" aria-hidden />

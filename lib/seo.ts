@@ -9,13 +9,14 @@ export const siteConfig = {
   name: "Chinmay Vivek",
   jobTitle: "Applied AI Research Engineer",
   tagline: "Building Scalable AI Products for Startups",
-  title: "Chinmay Vivek | Applied AI Research Engineer | Scalable AI for Startups",
+  title: "Chinmay Vivek | Applied AI Research Engineer & Full Stack Developer",
   description:
-    "Chinmay Vivek is an Applied AI Research Engineer in Bangalore, India. Building scalable AI products for startups: LLM applications, RAG pipelines, AI agents, and MLOps on AWS and Kubernetes.",
+    "Chinmay Vivek is an Applied AI Research Engineer and Full Stack Developer in Bangalore. Building scalable AI products for startups: LLM apps, RAG, full-stack backends, and MLOps.",
   keywords: [
     "Chinmay Vivek",
     "Chinmay Vivek AI engineer",
     "Applied AI Research Engineer Bangalore",
+    "Full Stack Developer AI",
     "Scalable AI products for startups",
     "Startup AI engineer India",
     "Generative AI engineer India",
@@ -32,6 +33,7 @@ export const siteConfig = {
     "Kubernetes AI deployment",
     "AWS ML platform",
     "Go Rust Python AI backend",
+    "Next.js React Flutter",
     "Multi-agent systems",
     "LangChain developer",
     "AI research engineer portfolio",
@@ -80,7 +82,7 @@ export const defaultMetadata: Metadata = {
         url: siteConfig.ogImage,
         width: 900,
         height: 1600,
-        alt: "Chinmay Vivek, Applied AI Research Engineer in Bangalore",
+        alt: "Chinmay Vivek, Applied AI Research Engineer and Full Stack Developer in Bangalore",
       },
     ],
   },
@@ -90,7 +92,7 @@ export const defaultMetadata: Metadata = {
     creator: siteConfig.twitter,
     title: siteConfig.title,
     description:
-      "Applied AI Research Engineer in Bangalore. Building scalable AI products for startups: LLM apps, RAG, AI agents, and MLOps.",
+      "Applied AI Research Engineer and Full Stack Developer in Bangalore. LLM apps, RAG, backends, and MLOps for startups.",
     images: [siteConfig.ogImage],
   },
   icons: {
@@ -110,9 +112,9 @@ export const jsonLd = {
       name: "Chinmay Vivek",
       url: siteUrl,
       image: `${siteUrl}/assets/img/hero-bg.webp`,
-      jobTitle: siteConfig.jobTitle,
+      jobTitle: `${siteConfig.jobTitle} · Full Stack Developer`,
       description:
-        "Applied AI Research Engineer in Bangalore. Building scalable AI products for startups with generative AI, LLM applications, RAG, AI agents, and MLOps on AWS and Kubernetes.",
+        "Applied AI Research Engineer and Full Stack Developer in Bangalore. Building scalable AI products for startups with generative AI, LLM applications, RAG, full-stack backends, and MLOps.",
       alumniOf: { "@type": "CollegeOrUniversity", name: "IIT Jodhpur" },
       sameAs: [
         "https://twitter.com/chinmayvivek",
@@ -125,7 +127,7 @@ export const jsonLd = {
         "Large Language Models",
         "Retrieval Augmented Generation",
         "AI Agent Development",
-        "Prompt Engineering",
+        "Full Stack Development",
         "MLOps Engineering",
         "Scalable AI Infrastructure",
         "Production Machine Learning",
@@ -135,6 +137,8 @@ export const jsonLd = {
         "Kubernetes",
         "Go",
         "Python",
+        "Next.js",
+        "React",
       ],
       address: {
         "@type": "PostalAddress",
@@ -146,7 +150,7 @@ export const jsonLd = {
     {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
-      name: "Chinmay Vivek | Applied AI Research Engineer Portfolio",
+      name: "Chinmay Vivek | Applied AI & Full Stack Portfolio",
       url: siteUrl,
       description: siteConfig.description,
       author: { "@id": `${siteUrl}/#person` },
@@ -156,9 +160,9 @@ export const jsonLd = {
       "@type": "ProfilePage",
       "@id": `${siteUrl}/#profilepage`,
       url: siteUrl,
-      name: "Chinmay Vivek | Applied AI Research Engineer Portfolio",
+      name: "Chinmay Vivek | Applied AI & Full Stack Portfolio",
       description:
-        "Portfolio of Chinmay Vivek: LLM systems, RAG, generative AI, fintech ML, and cloud AI infrastructure projects.",
+        "Portfolio of Chinmay Vivek: LLM systems, RAG, full-stack products, fintech ML, and cloud AI infrastructure.",
       mainEntity: { "@id": `${siteUrl}/#person` },
       isPartOf: { "@id": `${siteUrl}/#website` },
     },

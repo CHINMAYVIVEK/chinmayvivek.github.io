@@ -5,28 +5,29 @@ import { useState } from "react";
 import { sectionIdFromHref, useActiveSection } from "@/hooks/useActiveSection";
 
 const navSections = [
-  "about",
   "projects",
+  "about",
   "expertise",
   "research",
   "experience",
   "contact",
 ] as const;
 
+/** Executive-facing labels: leadership presence with technical depth */
 const navLinks: { href: string; label: string; external?: boolean }[] = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#expertise", label: "Expertise" },
+  { href: "#projects", label: "Portfolio" },
+  { href: "#about", label: "Profile" },
+  { href: "#expertise", label: "Capabilities" },
   { href: "#research", label: "Research" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-  { href: "https://chinmayvivek.medium.com/", label: "Medium", external: true },
+  { href: "#experience", label: "Collaborations" },
+  { href: "#contact", label: "Engage" },
+  { href: "https://chinmayvivek.medium.com/", label: "Insights", external: true },
 ];
 
 function navLinkClass(isActive: boolean, mobile = false) {
   const base = mobile
-    ? "block px-2 py-3 text-sm font-medium transition-colors"
-    : "nav-link text-sm font-medium";
+    ? "block px-2 py-3 text-sm font-medium tracking-wide transition-colors"
+    : "nav-link text-sm font-medium tracking-wide";
 
   return `${base} ${isActive ? "nav-link--active" : "text-[var(--muted)] hover:text-[var(--ink)]"}`;
 }
@@ -38,22 +39,29 @@ export function Nav() {
   return (
     <nav className="site-nav fixed w-full z-50" aria-label="Main navigation">
       <div className="site-container">
-        <div className="flex justify-between h-16 items-center">
-          <Link href="/" className="flex items-center gap-2.5 group">
+        <div className="flex justify-between h-16 items-center gap-4">
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 group min-w-0"
+            aria-label="Chinmay Vivek — Applied AI leader and technologist"
+          >
             <img
               src="/assets/icons/icon-32x32.png"
               alt=""
               width={32}
               height={32}
-              className="w-8 h-8 rounded-full ring-1 ring-[var(--border)] group-hover:ring-[var(--accent)]/40 transition-all"
+              className="w-8 h-8 shrink-0 rounded-full ring-1 ring-[var(--border)] group-hover:ring-[var(--accent)]/40 transition-all"
               decoding="async"
             />
-            <span className="site-nav__brand">
-              Chinmay <span className="site-nav__brand-accent">Vivek</span>
+            <span className="site-nav__lockup">
+              <span className="site-nav__brand">
+                Chinmay <span className="site-nav__brand-accent">Vivek</span>
+              </span>
+              <span className="site-nav__tagline">AI Product Leadership</span>
             </span>
           </Link>
 
-          <div className="hidden sm:flex sm:gap-7">
+          <div className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-7">
             {navLinks.map((link) => {
               const sectionId = sectionIdFromHref(link.href);
               const isActive = sectionId !== null && activeSection === sectionId;
@@ -75,7 +83,7 @@ export function Nav() {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="sm:hidden p-2 rounded-lg text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--paper-muted)]"
+            className="lg:hidden p-2 rounded-lg text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--paper-muted)]"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
@@ -92,7 +100,10 @@ export function Nav() {
         </div>
 
         {isMenuOpen && (
-          <div className="sm:hidden pb-4 border-t border-[var(--border)]">
+          <div className="lg:hidden pb-4 border-t border-[var(--border)]">
+            <p className="px-2 pt-3 pb-1 text-[0.625rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+              Navigate
+            </p>
             {navLinks.map((link) => {
               const sectionId = sectionIdFromHref(link.href);
               const isActive = sectionId !== null && activeSection === sectionId;

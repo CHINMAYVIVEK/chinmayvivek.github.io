@@ -22,6 +22,8 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  outcomes?: string[];
+  featured?: boolean;
   category: Exclude<ProjectCategory, "all">[];
   image: { icon: ProjectIcon };
   tag: { text: string };
@@ -37,13 +39,13 @@ export interface TimelineTheme {
 }
 
 export interface TimelineEntry {
-  year: string;
-  role: string;
+  id: string;
   company: string;
-  period: string;
-  location: string;
-  points: string[];
-  skills: string[];
+  role: string;
+  /** One-line outcome shown under the company mark */
+  impact: string;
+  /** Optional logo under public/; falls back to monogram */
+  logo?: string;
   theme: TimelineTheme;
 }
 

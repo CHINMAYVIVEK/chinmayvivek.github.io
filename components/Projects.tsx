@@ -20,6 +20,77 @@ const filters: { id: ProjectCategory; label: string }[] = [
   { id: "fintech", label: "FinTech" },
 ];
 
+function FeaturedProject({ project }: { project: Project }) {
+  const href =
+    project.links.demo !== "#"
+      ? project.links.demo
+      : project.links.github !== "#"
+        ? project.links.github
+        : null;
+
+  return (
+    <article
+      className="site-card project-card overflow-hidden mb-10 lg:mb-12"
+      style={projectCardStyle(project.theme)}
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="project-card__header relative min-h-[14rem] lg:min-h-[20rem]">
+          <div className="project-card__header-grid" aria-hidden />
+          <div className="project-card__header-glow" aria-hidden />
+          <div className="relative z-10 flex h-full min-h-[14rem] lg:min-h-[20rem] items-center justify-center">
+            <div className="project-card__icon-wrap">
+              <ProjectIconSvg
+                icon={project.image.icon}
+                className="w-14 h-14"
+                title={project.title}
+              />
+            </div>
+          </div>
+          <span className="project-card__tag absolute top-4 left-4 z-10 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
+            Featured
+          </span>
+        </div>
+        <div className="p-8 lg:p-10 flex flex-col justify-center">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] mb-3">
+            {project.tag.text}
+          </p>
+          <h3 className="font-display text-3xl text-[var(--ink)] mb-4 leading-tight">
+            {project.title}
+          </h3>
+          <p className="site-card__body mb-6">{project.description}</p>
+          {project.outcomes && (
+            <ul className="space-y-3 mb-6">
+              {project.outcomes.map((outcome) => (
+                <li key={outcome} className="flex gap-3 text-[var(--muted)] text-[0.9375rem]">
+                  <span className="site-bullet" aria-hidden />
+                  {outcome}
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="site-tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+          {href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-btn site-btn--primary self-start"
+            >
+              View project
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
 function ProjectCard({ project }: { project: Project }) {
   const hasDemo = project.links.demo && project.links.demo !== "#";
   const hasGithub = project.links.github && project.links.github !== "#";
@@ -29,7 +100,7 @@ function ProjectCard({ project }: { project: Project }) {
       className="site-card project-card overflow-hidden group"
       style={projectCardStyle(project.theme)}
     >
-      <div className="project-card__header relative h-44">
+      <div className="project-card__header relative h-48">
         <div className="project-card__header-grid" aria-hidden />
         <div className="project-card__header-glow" aria-hidden />
         <div className="relative z-10 flex h-full items-center justify-center">
@@ -46,12 +117,7 @@ function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
       <div className="p-6">
-        <div className="flex items-start gap-3 mb-3">
-          <div className="project-card__icon-inline shrink-0">
-            <ProjectIconSvg icon={project.image.icon} className="w-5 h-5" />
-          </div>
-          <h3 className="site-card__title text-lg leading-snug pt-0.5">{project.title}</h3>
-        </div>
+        <h3 className="site-card__title text-lg leading-snug mb-3">{project.title}</h3>
         <p className="site-card__body text-sm mb-4 line-clamp-3">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-5">
           {project.technologies.map((tech) => (
@@ -96,20 +162,24 @@ function ProjectCard({ project }: { project: Project }) {
 
 export function Projects() {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("all");
-
+  const featured = projects.find((p) => p.featured);
   const filtered = projects.filter(
-    (p) => activeFilter === "all" || p.category.includes(activeFilter),
+    (p) =>
+      !p.featured &&
+      (activeFilter === "all" || p.category.includes(activeFilter)),
   );
 
   return (
     <section id="projects" className="site-section">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Portfolio"
+          eyebrow="Selected work"
           title="Featured"
           titleAccent="Projects"
-          description="Selected AI and ML work by Chinmay Vivek: LLM systems, RAG, fintech machine learning, and cloud-native platforms built with Python, Go, PyTorch, and Kubernetes."
+          description="Shipped AI systems and full-stack products: computer vision, LLM stacks, fintech ML, and cloud-native platforms."
         />
+
+        {featured && <FeaturedProject project={featured} />}
 
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
           {filters.map((f) => (

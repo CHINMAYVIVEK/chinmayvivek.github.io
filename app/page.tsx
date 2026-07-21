@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <HomeClient>
       <Hero />
-      <About />
       <Projects />
+      <About />
       <Expertise />
       <Research />
       <Experience />

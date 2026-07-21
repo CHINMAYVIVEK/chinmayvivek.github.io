@@ -40,17 +40,19 @@ export function Contact() {
     <section id="contact" className="site-section site-section--muted">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Reach out"
+          eyebrow="Collaborate"
           title="Get in"
           titleAccent="Touch"
-          description="Contact Chinmay Vivek for generative AI consulting, LLM development, RAG implementation, or MLOps work. Based in Bangalore, Karnataka, India."
+          description="Open to building AI products and full-stack systems with startups and product teams. Based in Bangalore."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        <div className="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-start">
           <article className="site-card p-8 lg:p-10">
-            <h3 className="site-card__title text-xl mb-6">Connect with me</h3>
-            <div className="mt-8 pt-8 border-t border-[var(--border)]">
-              <ul className="space-y-3">
+            <h3 className="site-card__title text-xl mb-2">Find me online</h3>
+            <p className="text-sm text-[var(--muted)] mb-6">
+              GitHub, LinkedIn, writing, and updates.
+            </p>
+            <ul className="space-y-3">
                 {socialLinks.map((link) => (
                   <li key={link.href}>
                     <a
@@ -74,7 +76,6 @@ export function Contact() {
                   </li>
                 ))}
               </ul>
-            </div>
           </article>
 
           <ContactForm />

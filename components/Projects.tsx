@@ -9,7 +9,6 @@ import { ProjectIconSvg } from "@/lib/projectIcons";
 function projectCardStyle(theme: ProjectTheme): CSSProperties {
   const vars: Record<string, string> = { "--project-header-bg": theme.header };
   if (theme.fg) vars["--project-header-fg"] = theme.fg;
-  if (theme.inlineBg) vars["--project-inline-icon-bg"] = theme.inlineBg;
   return vars as CSSProperties;
 }
 

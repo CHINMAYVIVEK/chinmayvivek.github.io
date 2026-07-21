@@ -1,17 +1,15 @@
 import manifest from "@/data/image-manifest.json";
 
-export type ImageManifestEntry = {
+type ImageManifestEntry = {
   webp: string;
   width: number;
   height: number;
   bytes: number;
 };
 
-export type ImageManifest = Record<string, ImageManifestEntry>;
+const images = manifest as Record<string, ImageManifestEntry>;
 
-const images = manifest as ImageManifest;
-
-export function getOptimizedImage(name: string): ImageManifestEntry {
+function getOptimizedImage(name: string): ImageManifestEntry {
   const entry = images[name];
   if (!entry || entry.bytes === 0) {
     return {
@@ -24,4 +22,7 @@ export function getOptimizedImage(name: string): ImageManifestEntry {
   return entry;
 }
 
-export const heroImage = getOptimizedImage("hero-bg");
+const hero = getOptimizedImage("hero-bg");
+
+/** Public surface: only the path used by Hero */
+export const heroImage = { webp: hero.webp };

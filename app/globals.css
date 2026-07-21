@@ -305,17 +305,6 @@ section.visible {
   transform: translateY(-1px);
 }
 
-.site-btn--ghost {
-  border: 1px solid rgba(15, 15, 16, 0.18);
-  color: var(--ink);
-  background: transparent;
-}
-
-.site-btn--ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 .site-filter {
   padding: 0.5rem 1.25rem;
   font-size: 0.8125rem;
@@ -392,47 +381,6 @@ section.visible {
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
-}
-
-/* Timeline cards: theme vars set per entry from data/timeline.ts */
-.timeline-entry {
-  --timeline-accent: var(--accent);
-  --timeline-icon: var(--timeline-accent);
-  --timeline-skill-bg: var(--accent-soft);
-  --timeline-skill-fg: var(--timeline-accent);
-}
-
-.timeline-entry__dot {
-  background: var(--timeline-accent);
-}
-
-.timeline-entry__line {
-  background: color-mix(in srgb, var(--timeline-accent) 25%, transparent);
-}
-
-.timeline-entry__card {
-  border-left-color: var(--timeline-accent);
-}
-
-.timeline-entry__badge {
-  background: var(--timeline-accent);
-}
-
-.timeline-entry__title {
-  color: var(--timeline-accent);
-}
-
-.timeline-entry__icon {
-  color: var(--timeline-icon);
-}
-
-.timeline-entry__skill {
-  background: var(--timeline-skill-bg);
-  color: var(--timeline-skill-fg);
-}
-
-.timeline-entry .site-bullet {
-  background: var(--timeline-accent);
 }
 
 /* —— Progress bar —— */
@@ -744,12 +692,6 @@ section.visible {
 .project-card {
   --project-header-bg: var(--accent);
   --project-header-fg: var(--paper);
-  --project-inline-icon-fg: var(--project-header-bg);
-  --project-inline-icon-bg: color-mix(
-    in srgb,
-    var(--project-header-bg) 12%,
-    var(--paper)
-  );
   --project-header-icon-bg: color-mix(
     in srgb,
     var(--project-header-fg) 18%,
@@ -815,19 +757,6 @@ section.visible {
   color: var(--project-header-fg);
   border: 1px solid
     color-mix(in srgb, var(--project-header-fg) 25%, transparent);
-}
-
-.project-card__icon-inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.5rem;
-  color: var(--project-inline-icon-fg);
-  background: var(--project-inline-icon-bg);
-  border: 1px solid
-    color-mix(in srgb, var(--project-inline-icon-fg) 12%, transparent);
 }
 
 /* Company strip: wide brand tiles that fit wordmarks without cropping */
@@ -953,21 +882,22 @@ section.visible {
   opacity: 1;
 }
 
-/* Contact: side-by-side layout; form card scrolls when content is long */
+/* Contact: compact for Google Sign-in; taller + scrollable when form is shown */
 .contact-form-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 0;
-  min-height: 28rem;
-  max-height: min(75vh, 52rem);
+  transition: height 0.35s ease;
 }
 
-@media (min-width: 1024px) {
-  .contact-form-card {
-    min-height: 36rem;
-    max-height: min(80vh, 56rem);
-  }
+.contact-form-card--auth {
+  max-height: none;
+}
+
+.contact-form-card--form {
+  max-height: min(80vh, 48rem);
 }
 
 .contact-form-card__frame {
@@ -981,9 +911,36 @@ section.visible {
   overscroll-behavior: contain;
 }
 
+.contact-form-card--auth .contact-form-card__frame {
+  overflow: hidden;
+}
+
 .contact-form-card__frame iframe {
   display: block;
   width: 100%;
-  min-height: 100%;
   border: 0;
+}
+
+.contact-form-card__expand {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 2;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--paper-elevated) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.contact-form-card__expand:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }

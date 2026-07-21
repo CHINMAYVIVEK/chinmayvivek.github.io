@@ -8,8 +8,8 @@ function SkillGroupCard({ group }: { group: SkillGroup }) {
       <p className="site-skill-group__title">{group.title}</p>
       <div className="flex flex-wrap gap-2">
         {group.tags.map((t) => (
-          <span key={t.label} className="site-tag">
-            {t.label}
+          <span key={t} className="site-tag">
+            {t}
           </span>
         ))}
       </div>
@@ -68,8 +68,8 @@ export function Expertise() {
             </p>
             <div className="flex flex-wrap gap-2">
               {coreTechnologies.map((tech) => (
-                <span key={tech.label} className="site-chip">
-                  {tech.label}
+                <span key={tech} className="site-chip">
+                  {tech}
                 </span>
               ))}
             </div>

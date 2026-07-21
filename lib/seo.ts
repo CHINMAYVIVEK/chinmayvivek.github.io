@@ -40,10 +40,9 @@ export const siteConfig = {
   ],
   ogImage: "/assets/img/hero-bg.webp",
   twitter: "@chinmayvivek",
-  email: "iam@chinmayvivek.com",
 };
 
-export const metadataBase = new URL(siteUrl);
+const metadataBase = new URL(siteUrl);
 
 export const defaultMetadata: Metadata = {
   metadataBase,

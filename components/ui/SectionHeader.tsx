@@ -3,8 +3,6 @@ type SectionHeaderProps = {
   title: string;
   titleAccent?: string;
   description?: string;
-  align?: "center" | "left";
-  className?: string;
 };
 
 export function SectionHeader({
@@ -12,13 +10,9 @@ export function SectionHeader({
   title,
   titleAccent,
   description,
-  align = "center",
-  className = "",
 }: SectionHeaderProps) {
-  const alignClass = align === "center" ? "site-section-header--center" : "site-section-header--left";
-
   return (
-    <header className={`site-section-header ${alignClass} ${className}`}>
+    <header className="site-section-header site-section-header--center">
       <div className="site-eyebrow">
         <span className="site-eyebrow__line" aria-hidden />
         <span>{eyebrow}</span>

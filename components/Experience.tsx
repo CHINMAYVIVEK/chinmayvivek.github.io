@@ -65,7 +65,6 @@ export function Experience() {
           title="Collaborated"
           titleAccent="with"
           description="Contract and full-time engagements across security, AI, fintech, and consumer platforms."
-          align="center"
         />
 
         <ul className="company-strip" aria-label="Companies">

@@ -234,10 +234,6 @@ section.visible {
   margin-right: auto;
 }
 
-.site-section-header--left .site-eyebrow {
-  justify-content: flex-start;
-}
-
 .site-eyebrow {
   display: flex;
   align-items: center;

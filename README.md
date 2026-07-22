@@ -1,6 +1,6 @@
 # Chinmay Vivek | Portfolio
 
-Personal portfolio built with **Next.js 16.2.6**, **React 19**, **TypeScript**, and **Bun**.
+Personal portfolio built with **Next.js 16.2.11**, **React 19**, **TypeScript**, and **Bun**.
 
 ## Stack
 

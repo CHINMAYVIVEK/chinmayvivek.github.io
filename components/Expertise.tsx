@@ -40,7 +40,7 @@ export function Expertise() {
     <section id="expertise" className="site-section site-section--muted">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Capabilities"
+          eyebrow="Skills"
           title="Professional"
           titleAccent="Expertise"
           description="Skills of Chinmay Vivek as an AI systems architect: generative AI development, LLM engineering, RAG, AI agents, MLOps, and distributed ML on AWS, GCP, and Kubernetes."
@@ -77,9 +77,9 @@ export function Expertise() {
         </article>
 
         <div className="mt-14 text-center">
-          <p className="text-[var(--muted)] mb-5">Need an AI engineer for LLM or MLOps work? Send a message.</p>
+          <p className="text-[var(--muted)] mb-5">Need an AI engineer for LLM or MLOps work? Book a short intro call.</p>
           <a href="#contact" className="site-btn site-btn--primary">
-            Let&apos;s connect
+            Book a call
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
               <path
                 fillRule="evenodd"

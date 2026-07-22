@@ -11,11 +11,11 @@ export default function HomePage() {
   return (
     <HomeClient>
       <Hero />
-      <Projects />
       <About />
+      <Experience />
+      <Projects />
       <Expertise />
       <Research />
-      <Experience />
       <Contact />
     </HomeClient>
   );

@@ -138,6 +138,33 @@ body {
   }
 }
 
+.site-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border-radius: 9999px;
+  background: var(--ink);
+  color: var(--paper);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-nav__cta:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.site-nav__cta--compact {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+}
+
 /* —— Section scroll reveal —— */
 section {
   opacity: 0;

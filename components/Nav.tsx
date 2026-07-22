@@ -3,25 +3,27 @@
 import Link from "next/link";
 import { useState } from "react";
 import { sectionIdFromHref, useActiveSection } from "@/hooks/useActiveSection";
+import { siteConfig } from "@/lib/seo";
 
+/** Scroll order matches nav: who → where → work → skills → research → contact */
 const navSections = [
-  "projects",
   "about",
+  "experience",
+  "projects",
   "expertise",
   "research",
-  "experience",
   "contact",
 ] as const;
 
-/** Executive-facing labels: leadership presence with technical depth */
+/** Plain labels — standard portfolio hierarchy, no coined synonyms */
 const navLinks: { href: string; label: string; external?: boolean }[] = [
-  { href: "#projects", label: "Portfolio" },
-  { href: "#about", label: "Profile" },
-  { href: "#expertise", label: "Capabilities" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#expertise", label: "Skills" },
   { href: "#research", label: "Research" },
-  { href: "#experience", label: "Collaborations" },
-  { href: "#contact", label: "Engage" },
-  { href: "https://chinmayvivek.medium.com/", label: "Insights", external: true },
+  { href: "#contact", label: "Contact" },
+  { href: "https://chinmayvivek.medium.com/", label: "Blog", external: true },
 ];
 
 function navLinkClass(isActive: boolean, mobile = false) {
@@ -43,7 +45,7 @@ export function Nav() {
           <Link
             href="/"
             className="flex items-center gap-2.5 group min-w-0"
-            aria-label="Chinmay Vivek — Applied AI leader and technologist"
+            aria-label={`${siteConfig.name}, ${siteConfig.jobTitle}`}
           >
             <img
               src="/assets/icons/icon-32x32.png"
@@ -57,11 +59,11 @@ export function Nav() {
               <span className="site-nav__brand">
                 Chinmay <span className="site-nav__brand-accent">Vivek</span>
               </span>
-              <span className="site-nav__tagline">AI Product Leadership</span>
+              <span className="site-nav__tagline">{siteConfig.jobTitle}</span>
             </span>
           </Link>
 
-          <div className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-7">
+          <div className="hidden lg:flex lg:items-center lg:gap-5 xl:gap-6">
             {navLinks.map((link) => {
               const sectionId = sectionIdFromHref(link.href);
               const isActive = sectionId !== null && activeSection === sectionId;
@@ -78,15 +80,32 @@ export function Nav() {
                 </a>
               );
             })}
+            <a
+              href={siteConfig.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-nav__cta"
+            >
+              Book a call
+            </a>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--paper-muted)]"
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={siteConfig.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-nav__cta site-nav__cta--compact"
+            >
+              Book a call
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--paper-muted)]"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+            >
             {isMenuOpen ? (
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -96,7 +115,8 @@ export function Nav() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
-          </button>
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (

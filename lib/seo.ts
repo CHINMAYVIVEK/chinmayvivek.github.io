@@ -40,6 +40,7 @@ export const siteConfig = {
   ],
   ogImage: "/assets/img/hero-bg.webp",
   twitter: "@chinmayvivek",
+  calendlyUrl: "https://calendly.com/chinmay-vivek/new-meeting",
 };
 
 const metadataBase = new URL(siteUrl);

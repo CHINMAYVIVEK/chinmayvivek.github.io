@@ -41,7 +41,7 @@ export function Research() {
     <section id="research" className="site-section site-section--alt">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Focus"
+          eyebrow="Research"
           title="Research"
           titleAccent="Interests"
           description="Applied AI research by Chinmay Vivek: generative AI, LLM application development, RAG, AI agent systems, and production machine learning for fintech and enterprise."

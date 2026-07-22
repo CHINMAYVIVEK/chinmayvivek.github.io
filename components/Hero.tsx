@@ -90,9 +90,14 @@ export function Hero() {
               <Link href="#projects" className="hero-premium__btn hero-premium__btn--primary">
                 View work
               </Link>
-              <Link href="#contact" className="hero-premium__btn hero-premium__btn--ghost">
-                Get in touch
-              </Link>
+              <a
+                href={siteConfig.calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-premium__btn hero-premium__btn--ghost"
+              >
+                Book a call
+              </a>
             </div>
 
             <ul className="hero-premium__tags" aria-label="Technical focus areas">

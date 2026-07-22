@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { siteConfig } from "@/lib/seo";
 
 type SocialIconType = "github" | "linkedin" | "x" | "medium";
 
@@ -40,11 +41,37 @@ export function Contact() {
     <section id="contact" className="site-section site-section--muted">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Collaborate"
+          eyebrow="Contact"
           title="Get in"
           titleAccent="Touch"
           description="Open to building AI products and full-stack systems with startups and product teams. Based in Bangalore."
         />
+
+        <article className="site-card p-8 lg:p-10 mb-8 lg:mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+            <div className="min-w-0">
+              <h3 className="site-card__title text-xl mb-2">Book a call</h3>
+              <p className="text-sm text-[var(--muted)] max-w-xl">
+                Prefer a conversation? Schedule a 30-minute intro — pick a time that works for you.
+              </p>
+            </div>
+            <a
+              href={siteConfig.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-btn site-btn--primary shrink-0"
+            >
+              Schedule a meeting
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
 
         <div className="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-start">
           <article className="site-card p-8 lg:p-10">
@@ -53,29 +80,29 @@ export function Contact() {
               GitHub, LinkedIn, writing, and updates.
             </p>
             <ul className="space-y-3">
-                {socialLinks.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-4 rounded-[var(--radius)] border border-[var(--border)] px-4 py-3 text-[var(--muted)] transition-colors hover:border-[var(--accent)]/30 hover:text-[var(--accent)]"
-                    >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--paper)] text-[var(--muted)] transition-colors group-hover:border-[var(--accent)]/30 group-hover:text-[var(--accent)]">
-                        <SocialIcon type={link.icon} />
+              {socialLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 rounded-[var(--radius)] border border-[var(--border)] px-4 py-3 text-[var(--muted)] transition-colors hover:border-[var(--accent)]/30 hover:text-[var(--accent)]"
+                  >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--paper)] text-[var(--muted)] transition-colors group-hover:border-[var(--accent)]/30 group-hover:text-[var(--accent)]">
+                      <SocialIcon type={link.icon} />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold text-[var(--ink)] transition-colors group-hover:text-[var(--accent)]">
+                        {link.label}
                       </span>
-                      <span className="min-w-0">
-                        <span className="block text-sm font-semibold text-[var(--ink)] transition-colors group-hover:text-[var(--accent)]">
-                          {link.label}
-                        </span>
-                        <span className="block truncate text-xs text-[var(--muted)]">
-                          {formatSocialHref(link.href)}
-                        </span>
+                      <span className="block truncate text-xs text-[var(--muted)]">
+                        {formatSocialHref(link.href)}
                       </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </article>
 
           <ContactForm />

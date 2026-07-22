@@ -20,7 +20,7 @@ export function About() {
     <section id="about" className="site-section site-section--alt">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Background"
+          eyebrow="About"
           title="About"
           titleAccent="Me"
           description="Chinmay Vivek is an Applied AI Research Engineer in Bangalore. He builds scalable AI products for startups: LLM apps, RAG pipelines, and cloud ML backends."

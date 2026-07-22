@@ -13,7 +13,10 @@ export const projects: Project[] = [
     ],
     featured: true,
     category: ["enterprise", "ai"],
-    image: { icon: "sentinel-vision" },
+    image: {
+      icon: "sentinel-vision",
+      src: "https://github.com/CHINMAYVIVEK/SentinelVision/raw/main/screenshots/test_detection_result_letterbox.jpg",
+    },
     tag: { text: "Computer Vision" },
     theme: { header: "#3d4a5c", fg: "#f2f4f7" },
     technologies: ["Rust", "OpenCV", "ONNX", "SORT"],
@@ -64,7 +67,10 @@ export const projects: Project[] = [
     description:
       "Custom LLM training and serving stack for enterprise NLP and generative AI workloads on AWS.",
     category: ["ai"],
-    image: { icon: "llm" },
+    image: {
+      icon: "llm",
+      src: "https://myoceane.fr/wp-content/uploads/2026/04/vllm.png",
+    },
     tag: { text: "Generative AI" },
     theme: { header: "#2a3f6e", fg: "#f0f2f8" },
     technologies: ["Python", "PyTorch", "CUDA", "AWS"],
@@ -100,7 +106,10 @@ export const projects: Project[] = [
     description:
       "Streaming analytics dashboard in Rust and Next.js for live operational visibility.",
     category: ["enterprise"],
-    image: { icon: "analytics" },
+    image: {
+      icon: "analytics",
+      src: "https://cdn.boldbi.com/wp/blogs/real-time-analytics/financial.webp",
+    },
     tag: { text: "Full Stack" },
     theme: { header: "#3d4a5c", fg: "#f2f4f7" },
     technologies: ["Rust", "Next.js", "PostgreSQL", "Redis"],
@@ -112,7 +121,10 @@ export const projects: Project[] = [
     description:
       "Open source LMS for live online classes: courses, attendance, and real-time sessions with Go and HTMX.",
     category: ["enterprise"],
-    image: { icon: "lms" },
+    image: {
+      icon: "lms",
+      src: "https://github.com/CHINMAYVIVEK/liveClass/raw/main/screenshots/Screenshot-1.png",
+    },
     tag: { text: "Full Stack" },
     theme: { header: "#2d5a68" },
     technologies: ["Go", "Docker", "PostgreSQL", "HTMX"],

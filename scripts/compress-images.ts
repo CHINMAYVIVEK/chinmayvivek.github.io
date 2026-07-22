@@ -1,14 +1,16 @@
 /**
  * Compresses portfolio images with Bun.Image before `next build`.
  * Requires Bun with Bun.Image support (Bun 1.2+).
+ *
+ * Compresses every `*.jpg` under public/assets/img/ → `.webp`
+ * (hero uses /assets/img/hero-bg.webp; project covers use image.src in data).
  */
 import { existsSync } from "node:fs";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dir, "..");
 const IMG_DIR = join(ROOT, "public", "assets", "img");
-const MANIFEST_PATH = join(ROOT, "data", "image-manifest.json");
 
 type ImageJob = {
   name: string;
@@ -18,27 +20,30 @@ type ImageJob = {
   quality: number;
 };
 
-const photoJobs: ImageJob[] = [
-  {
-    name: "hero-bg",
-    input: join(IMG_DIR, "hero-bg.jpg"),
-    output: join(IMG_DIR, "hero-bg.webp"),
-    maxWidth: 1920,
-    quality: 82,
-  },
-];
+function jobFor(name: string): ImageJob {
+  const isHero = name === "hero-bg";
+  return {
+    name,
+    input: join(IMG_DIR, `${name}.jpg`),
+    output: join(IMG_DIR, `${name}.webp`),
+    maxWidth: isHero ? 1920 : 1400,
+    quality: isHero ? 82 : 80,
+  };
+}
 
-type ManifestEntry = {
-  webp: string;
-  width: number;
-  height: number;
-  bytes: number;
-};
+async function discoverJobs(): Promise<ImageJob[]> {
+  if (!existsSync(IMG_DIR)) return [];
+  const files = await readdir(IMG_DIR);
+  return files
+    .filter((f) => f.toLowerCase().endsWith(".jpg"))
+    .map((f) => jobFor(f.replace(/\.jpg$/i, "")))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
 
-async function compressPhoto(job: ImageJob): Promise<ManifestEntry | null> {
+async function compressPhoto(job: ImageJob): Promise<boolean> {
   if (!existsSync(job.input)) {
     console.warn(`[compress-images] skip missing: ${job.input}`);
-    return null;
+    return false;
   }
 
   const file = Bun.file(job.input);
@@ -58,27 +63,24 @@ async function compressPhoto(job: ImageJob): Promise<ManifestEntry | null> {
   const bytes = (await Bun.file(job.output).arrayBuffer()).byteLength;
 
   console.log(`[compress-images] ${job.name}: ${meta.width}x${meta.height} → ${(bytes / 1024).toFixed(1)} KB`);
-
-  return {
-    webp: `/assets/img/${job.name}.webp`,
-    width: meta.width,
-    height: meta.height,
-    bytes,
-  };
+  return true;
 }
 
 async function main() {
-  await mkdir(join(ROOT, "data"), { recursive: true });
+  await mkdir(IMG_DIR, { recursive: true });
 
-  const manifest: Record<string, ManifestEntry> = {};
+  const jobs = await discoverJobs();
+  let written = 0;
 
-  for (const job of photoJobs) {
-    const entry = await compressPhoto(job);
-    if (entry) manifest[job.name] = entry;
+  if (jobs.length === 0) {
+    console.warn(`[compress-images] no .jpg files in ${IMG_DIR}`);
   }
 
-  await Bun.write(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
-  console.log(`[compress-images] wrote ${MANIFEST_PATH}`);
+  for (const job of jobs) {
+    if (await compressPhoto(job)) written += 1;
+  }
+
+  console.log(`[compress-images] done (${written} images)`);
 }
 
 main().catch((err) => {

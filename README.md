@@ -27,9 +27,7 @@ bun run build
 
 Runs `scripts/compress-images.ts` (Bun.Image) then `next build`. Static site output is in `out/`.
 
-```bash
-bun run start   # serves production build (after export, use a static server for `out/`)
-```
+Serve the export locally with any static server, e.g. `npx serve out`.
 
 ## Deploy
 
@@ -61,8 +59,8 @@ Build sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com`. Point DNS for `chinm
 ```
 app/              layout, page, globals.css, sitemap, robots
 components/       UI sections
-data/             typed data + image manifest
-lib/              SEO config, colors, images helper
+data/             typed content (projects, timeline, expertise)
+lib/              SEO config, images helper
 scripts/          compress-images.ts (Bun.Image)
 public/assets/    icons, source photos
 ```
@@ -71,7 +69,7 @@ public/assets/    icons, source photos
 
 `scripts/compress-images.ts` uses **Bun.Image** to:
 
-- Resize hero photo (max 1920px, `fit: inside`) and encode WebP
-- Write `data/image-manifest.json` for `next/image` paths
+- Resize local photos under `public/assets/img/` (hero max 1920px, `fit: inside`) and encode WebP
+- Hero uses `/assets/img/hero-bg.webp`; project covers set `image.src` in `data/projects.ts`
 
 Requires a recent Bun with `Bun.file().image()` support.

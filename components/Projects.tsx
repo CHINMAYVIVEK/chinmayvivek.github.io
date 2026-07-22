@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
+import Image from "next/image";
 import { projects } from "@/data/projects";
 import type { Project, ProjectCategory, ProjectTheme } from "@/data/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -19,6 +20,50 @@ const filters: { id: ProjectCategory; label: string }[] = [
   { id: "fintech", label: "FinTech" },
 ];
 
+function ProjectMedia({
+  project,
+  iconClassName,
+  featured = false,
+}: {
+  project: Project;
+  iconClassName: string;
+  featured?: boolean;
+}) {
+  if (project.image.src) {
+    return (
+      <>
+        <Image
+          src={project.image.src}
+          alt={project.title}
+          fill
+          className="project-card__cover"
+          sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+          priority={featured}
+        />
+        <div className="project-card__cover-shade" aria-hidden />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <div className="project-card__header-grid" aria-hidden />
+      <div className="project-card__header-glow" aria-hidden />
+      <div
+        className={`relative z-10 flex h-full items-center justify-center${featured ? " min-h-[14rem] lg:min-h-[20rem]" : ""}`}
+      >
+        <div className="project-card__icon-wrap">
+          <ProjectIconSvg
+            icon={project.image.icon}
+            className={iconClassName}
+            title={project.title}
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
 function FeaturedProject({ project }: { project: Project }) {
   const href =
     project.links.demo !== "#"
@@ -27,24 +72,18 @@ function FeaturedProject({ project }: { project: Project }) {
         ? project.links.github
         : null;
 
+  const hasCover = Boolean(project.image.src);
+
   return (
     <article
       className="site-card project-card overflow-hidden mb-10 lg:mb-12"
       style={projectCardStyle(project.theme)}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="project-card__header relative min-h-[14rem] lg:min-h-[20rem]">
-          <div className="project-card__header-grid" aria-hidden />
-          <div className="project-card__header-glow" aria-hidden />
-          <div className="relative z-10 flex h-full min-h-[14rem] lg:min-h-[20rem] items-center justify-center">
-            <div className="project-card__icon-wrap">
-              <ProjectIconSvg
-                icon={project.image.icon}
-                className="w-14 h-14"
-                title={project.title}
-              />
-            </div>
-          </div>
+        <div
+          className={`project-card__header relative min-h-[14rem] lg:min-h-[20rem]${hasCover ? " project-card__header--has-cover" : ""}`}
+        >
+          <ProjectMedia project={project} iconClassName="w-14 h-14" featured />
           <span className="project-card__tag absolute top-4 left-4 z-10 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
             Featured
           </span>
@@ -93,24 +132,17 @@ function FeaturedProject({ project }: { project: Project }) {
 function ProjectCard({ project }: { project: Project }) {
   const hasDemo = project.links.demo && project.links.demo !== "#";
   const hasGithub = project.links.github && project.links.github !== "#";
+  const hasCover = Boolean(project.image.src);
 
   return (
     <article
       className="site-card project-card overflow-hidden group"
       style={projectCardStyle(project.theme)}
     >
-      <div className="project-card__header relative h-48">
-        <div className="project-card__header-grid" aria-hidden />
-        <div className="project-card__header-glow" aria-hidden />
-        <div className="relative z-10 flex h-full items-center justify-center">
-          <div className="project-card__icon-wrap">
-            <ProjectIconSvg
-              icon={project.image.icon}
-              className="w-11 h-11"
-              title={project.title}
-            />
-          </div>
-        </div>
+      <div
+        className={`project-card__header relative h-48${hasCover ? " project-card__header--has-cover" : ""}`}
+      >
+        <ProjectMedia project={project} iconClassName="w-11 h-11" />
         <span className="project-card__tag absolute top-4 right-4 z-10 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
           {project.tag.text}
         </span>

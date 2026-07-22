@@ -24,7 +24,11 @@ export interface Project {
   outcomes?: string[];
   featured?: boolean;
   category: Exclude<ProjectCategory, "all">[];
-  image: { icon: ProjectIcon };
+  image: {
+    icon: ProjectIcon;
+    /** Public path to cover image; omit to show icon */
+    src?: string;
+  };
   tag: { text: string };
   theme: ProjectTheme;
   technologies: string[];

@@ -1,13 +1,9 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { useState } from "react";
 import { timeline } from "@/data/timeline";
-import type { TimelineEntry, TimelineTheme } from "@/data/types";
+import type { TimelineEntry } from "@/data/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-
-function companyStyle(theme: TimelineTheme): CSSProperties {
-  return { "--company-accent": theme.accent } as CSSProperties;
-}
 
 function CompanyMark({ item }: { item: TimelineEntry }) {
   const [failed, setFailed] = useState(false);
@@ -38,24 +34,6 @@ function CompanyMark({ item }: { item: TimelineEntry }) {
   );
 }
 
-function CompanyLogo({ item }: { item: TimelineEntry }) {
-  return (
-    <li
-      className="company-logo"
-      style={companyStyle(item.theme)}
-      aria-label={item.company}
-      tabIndex={0}
-    >
-      <div className="company-logo__mark" aria-hidden>
-        <CompanyMark item={item} />
-      </div>
-      <span className="company-logo__name" aria-hidden>
-        {item.company}
-      </span>
-    </li>
-  );
-}
-
 export function Experience() {
   return (
     <section id="experience" className="site-section">
@@ -69,7 +47,11 @@ export function Experience() {
 
         <ul className="company-strip" aria-label="Companies">
           {timeline.map((item) => (
-            <CompanyLogo key={item.id} item={item} />
+            <li key={item.id} className="company-logo" aria-label={item.company}>
+              <div className="company-logo__mark" aria-hidden>
+                <CompanyMark item={item} />
+              </div>
+            </li>
           ))}
         </ul>
       </div>

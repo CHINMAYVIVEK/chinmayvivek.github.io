@@ -35,16 +35,11 @@ export interface Project {
   links: { demo: string; github: string };
 }
 
-export interface TimelineTheme {
-  accent: string;
-}
-
 export interface TimelineEntry {
   id: string;
   company: string;
   /** Optional logo under public/; falls back to monogram */
   logo?: string;
-  theme: TimelineTheme;
 }
 
 export interface SkillGroup {

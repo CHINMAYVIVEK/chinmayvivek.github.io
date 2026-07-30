@@ -3,6 +3,11 @@ import type { TimelineEntry } from "./types";
 /** Company engagements — expert portfolio, not a chronological CV */
 export const timeline: TimelineEntry[] = [
   {
+    id: "turing",
+    company: "Turing",
+    logo: "/assets/companies/turing.png",
+  },
+  {
     id: "ravanai",
     company: "Ravan AI",
     logo: "/assets/companies/ravan-ai.png",

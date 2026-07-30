@@ -21,14 +21,14 @@ export function About() {
       <div className="site-container">
         <SectionHeader
           eyebrow="About"
-          title="About"
-          titleAccent="Me"
-          description="Chinmay Vivek is an Applied AI Research Engineer in Bangalore. He builds scalable AI products for startups: LLM apps, RAG pipelines, and cloud ML backends."
+          title="Product"
+          titleAccent="builder"
+          description="Applied AI engineer shipping scalable products for startups — LLM apps, RAG systems, and cloud-native backends from Bangalore."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           <article className="site-card p-8 lg:p-10">
-            <h3 className="site-card__title text-xl mb-5">My journey</h3>
+            <h3 className="site-card__title text-xl mb-5">How I operate</h3>
             <p className="site-card__body mb-6">
               I am <strong className="text-[var(--ink)] font-medium">Chinmay Vivek</strong>, an Applied AI
               Research Engineer focused on startup products. My work spans generative AI, LLM applications,
@@ -36,7 +36,7 @@ export function About() {
               model tuning, FastAPI services, and Kubernetes-based MLOps on AWS and GCP.
             </p>
             <p className="text-sm font-semibold uppercase tracking-wider text-[var(--accent)] mb-4">
-              What I do
+              What I ship
             </p>
             <ul className="space-y-3">
               {whatIDo.map((item) => (
@@ -50,7 +50,7 @@ export function About() {
 
           <article className="site-card p-8 lg:p-10">
             <h3 className="font-display text-2xl text-[var(--ink)] mb-8">
-              Core <span className="text-[var(--accent)] italic">skills</span>
+              Core <span className="text-[var(--accent)] italic">strengths</span>
             </h3>
             <div className="space-y-6 mb-8">
               {skillBars.map((skill) => (

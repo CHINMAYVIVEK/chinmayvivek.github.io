@@ -42,9 +42,9 @@ export function Contact() {
       <div className="site-container">
         <SectionHeader
           eyebrow="Contact"
-          title="Get in"
-          titleAccent="Touch"
-          description="Open to building AI products and full-stack systems with startups and product teams. Based in Bangalore."
+          title="Let's"
+          titleAccent="build"
+          description="Open to product partnerships with startups and teams shipping AI systems. Based in Bangalore."
         />
 
         <article className="site-card p-8 lg:p-10 mb-8 lg:mb-10">
@@ -52,7 +52,7 @@ export function Contact() {
             <div className="min-w-0">
               <h3 className="site-card__title text-xl mb-2">Book a call</h3>
               <p className="text-sm text-[var(--muted)] max-w-xl">
-                Prefer a conversation? Schedule a 30-minute intro — pick a time that works for you.
+                Prefer a direct conversation? Hold 30 minutes — pick a slot that works.
               </p>
             </div>
             <a
@@ -75,9 +75,9 @@ export function Contact() {
 
         <div className="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-start">
           <article className="site-card p-8 lg:p-10">
-            <h3 className="site-card__title text-xl mb-2">Find me online</h3>
+            <h3 className="site-card__title text-xl mb-2">Presence</h3>
             <p className="text-sm text-[var(--muted)] mb-6">
-              GitHub, LinkedIn, writing, and updates.
+              Code, network, and writing.
             </p>
             <ul className="space-y-3">
               {socialLinks.map((link) => (

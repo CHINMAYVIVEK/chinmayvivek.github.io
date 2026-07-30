@@ -88,7 +88,7 @@ export function Hero() {
 
             <div className="hero-premium__actions">
               <Link href="#projects" className="hero-premium__btn hero-premium__btn--primary">
-                View work
+                View portfolio
               </Link>
               <a
                 href={siteConfig.calendlyUrl}
@@ -109,7 +109,7 @@ export function Hero() {
             <footer className="hero-premium__meta">
               <span>IIT Jodhpur</span>
               <span className="hero-premium__meta-dot" aria-hidden />
-              <span>Startup and fintech AI</span>
+              <span>Product AI for startups</span>
               <span className="hero-premium__meta-dot" aria-hidden />
               <span>Bangalore, India</span>
             </footer>

@@ -204,10 +204,10 @@ export function Projects() {
     <section id="projects" className="site-section">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Projects"
-          title="Featured"
-          titleAccent="Projects"
-          description="Shipped AI systems and full-stack products: computer vision, LLM stacks, fintech ML, and cloud-native platforms."
+          eyebrow="Portfolio"
+          title="Selected"
+          titleAccent="work"
+          description="AI systems and full-stack products in production: computer vision, LLM stacks, fintech ML, and cloud-native platforms."
         />
 
         {featured && <FeaturedProject project={featured} />}

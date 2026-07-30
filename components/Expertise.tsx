@@ -40,10 +40,10 @@ export function Expertise() {
     <section id="expertise" className="site-section site-section--muted">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Skills"
-          title="Professional"
-          titleAccent="Expertise"
-          description="Skills of Chinmay Vivek as an AI systems architect: generative AI development, LLM engineering, RAG, AI agents, MLOps, and distributed ML on AWS, GCP, and Kubernetes."
+          eyebrow="Stack"
+          title="Technical"
+          titleAccent="stack"
+          description="The systems stack behind the products: generative AI, LLM engineering, RAG, agents, MLOps, and distributed ML on AWS, GCP, and Kubernetes."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-10">
@@ -54,9 +54,9 @@ export function Expertise() {
 
         <article className="site-card p-8 lg:p-10">
           <h3 className="font-display text-2xl text-[var(--ink)] mb-2">
-            Enterprise AI and <span className="text-[var(--accent)] italic">research</span>
+            AI systems <span className="text-[var(--accent)] italic">lab</span>
           </h3>
-          <p className="text-[var(--muted)] mb-6">Deep learning, LLMs, and knowledge systems</p>
+          <p className="text-[var(--muted)] mb-6">Deep learning, LLMs, and knowledge systems in production</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {aiHubGroups.map((g) => (
               <SkillGroupCard key={g.title} group={g} />
@@ -64,7 +64,7 @@ export function Expertise() {
           </div>
           <div className="pt-6 border-t border-[var(--border)]">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] mb-4">
-              Core technologies
+              Core stack
             </p>
             <div className="flex flex-wrap gap-2">
               {coreTechnologies.map((tech) => (
@@ -77,7 +77,9 @@ export function Expertise() {
         </article>
 
         <div className="mt-14 text-center">
-          <p className="text-[var(--muted)] mb-5">Need an AI engineer for LLM or MLOps work? Book a short intro call.</p>
+          <p className="text-[var(--muted)] mb-5">
+            Need LLM or MLOps leadership on your product? Book a short intro.
+          </p>
           <a href="#contact" className="site-btn site-btn--primary">
             Book a call
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>

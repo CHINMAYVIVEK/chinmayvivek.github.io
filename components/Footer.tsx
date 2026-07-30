@@ -10,8 +10,7 @@ export function Footer() {
           </p>
           <p className="text-sm text-white/70">&copy; 2026 Chinmay Vivek. All rights reserved.</p>
           <p className="text-sm text-white/55 mt-3 max-w-xl mx-auto leading-relaxed">
-            Applied AI Research Engineer · Full Stack Developer. Building scalable AI products for
-            startups.
+            Applied AI · Product systems. Building scalable AI products for startups.
           </p>
         </div>
       </div>

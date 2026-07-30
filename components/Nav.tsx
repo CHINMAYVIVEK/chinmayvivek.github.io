@@ -5,7 +5,7 @@ import { useState } from "react";
 import { sectionIdFromHref, useActiveSection } from "@/hooks/useActiveSection";
 import { siteConfig } from "@/lib/seo";
 
-/** Scroll order matches nav: who → where → work → skills → research → contact */
+/** Scroll order: who → trusted by → work → stack → lab → contact */
 const navSections = [
   "about",
   "experience",
@@ -15,13 +15,13 @@ const navSections = [
   "contact",
 ] as const;
 
-/** Plain labels — standard portfolio hierarchy, no coined synonyms */
+/** Product-CEO nav labels */
 const navLinks: { href: string; label: string; external?: boolean }[] = [
   { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#expertise", label: "Skills" },
-  { href: "#research", label: "Research" },
+  { href: "#experience", label: "Trusted by" },
+  { href: "#projects", label: "Portfolio" },
+  { href: "#expertise", label: "Stack" },
+  { href: "#research", label: "Lab" },
   { href: "#contact", label: "Contact" },
   { href: "https://chinmayvivek.medium.com/", label: "Blog", external: true },
 ];

@@ -2,7 +2,7 @@ import type { ExpertisePanel, SkillGroup } from "./types";
 
 export const expertisePanels: ExpertisePanel[] = [
   {
-    title: "Expert Skills & Technologies",
+    title: "Product & systems",
     groups: [
       {
         title: "Backend & Systems",
@@ -38,7 +38,7 @@ export const expertisePanels: ExpertisePanel[] = [
     ],
   },
   {
-    title: "DevOps & Cloud",
+    title: "Cloud & delivery",
     groups: [
       {
         title: "Cloud Platforms",

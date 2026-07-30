@@ -8,7 +8,7 @@ export const siteUrl = (
 export const siteConfig = {
   name: "Chinmay Vivek",
   jobTitle: "Applied AI Research Engineer",
-  tagline: "Building Scalable AI Products for Startups",
+  tagline: "Shipping Scalable AI Products for Startups",
   title: "Chinmay Vivek | Applied AI Research Engineer & Full Stack Developer",
   description:
     "Chinmay Vivek is an Applied AI Research Engineer and Full Stack Developer in Bangalore. Building scalable AI products for startups: LLM apps, RAG, full-stack backends, and MLOps.",

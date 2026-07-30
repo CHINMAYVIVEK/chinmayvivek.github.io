@@ -9,7 +9,7 @@ const researchAreas = [
       "Natural language processing (NLP)",
       "Computer vision for production apps",
     ],
-    impactLabel: "Research impact",
+    impactLabel: "Lab impact",
     impact: "15+ shipped projects",
   },
   {
@@ -20,7 +20,7 @@ const researchAreas = [
       "Text-to-image and multimodal pipelines",
       "Prompt engineering and evaluation",
     ],
-    impactLabel: "Industry impact",
+    impactLabel: "Product impact",
     impact: "12 enterprise LLM deployments",
   },
   {
@@ -41,10 +41,10 @@ export function Research() {
     <section id="research" className="site-section site-section--alt">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Research"
-          title="Research"
-          titleAccent="Interests"
-          description="Applied AI research by Chinmay Vivek: generative AI, LLM application development, RAG, AI agent systems, and production machine learning for fintech and enterprise."
+          eyebrow="Lab"
+          title="Applied"
+          titleAccent="lab"
+          description="Where product meets research: generative AI, LLM systems, RAG, agents, and production ML for fintech and enterprise."
         />
 
         <div className="grid gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -54,7 +54,7 @@ export function Research() {
                 <h3 className="font-display text-xl text-[var(--ink)] leading-snug">{area.title}</h3>
                 <span className="site-tag shrink-0">{area.badge}</span>
               </div>
-              <p className="text-sm font-semibold text-[var(--ink)] mb-4">Core focus areas</p>
+              <p className="text-sm font-semibold text-[var(--ink)] mb-4">Focus areas</p>
               <ul className="space-y-3 mb-6">
                 {area.items.map((item) =>
                   typeof item === "string" ? (

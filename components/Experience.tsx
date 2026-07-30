@@ -39,13 +39,13 @@ export function Experience() {
     <section id="experience" className="site-section">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Experience"
-          title="Collaborated"
-          titleAccent="with"
-          description="Contract and full-time engagements across security, AI, fintech, and consumer platforms."
+          eyebrow="Trusted by"
+          title="Trusted"
+          titleAccent="by"
+          description="Product and platform teams across security, AI, fintech, and consumer — contract and full-time."
         />
 
-        <ul className="company-strip" aria-label="Companies">
+        <ul className="company-strip" aria-label="Trusted by">
           {timeline.map((item) => (
             <li key={item.id} className="company-logo" aria-label={item.company}>
               <div className="company-logo__mark" aria-hidden>

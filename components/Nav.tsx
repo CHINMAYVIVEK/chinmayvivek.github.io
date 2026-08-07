@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { sectionIdFromHref, useActiveSection } from "@/hooks/useActiveSection";
 import { siteConfig } from "@/lib/seo";
 
@@ -80,6 +81,7 @@ export function Nav() {
                 </a>
               );
             })}
+            <ThemeToggle />
             <a
               href={siteConfig.calendlyUrl}
               target="_blank"
@@ -91,6 +93,7 @@ export function Nav() {
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
             <a
               href={siteConfig.calendlyUrl}
               target="_blank"

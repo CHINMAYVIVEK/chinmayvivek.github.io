@@ -3,6 +3,7 @@ import { Instrument_Serif, Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { defaultMetadata, jsonLd } from "@/lib/seo";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,8 +23,9 @@ export const metadata = defaultMetadata;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable}`}>
+    <html lang="en" className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

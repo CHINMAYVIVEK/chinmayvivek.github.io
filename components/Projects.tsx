@@ -31,17 +31,14 @@ function ProjectMedia({
 }) {
   if (project.image.src) {
     return (
-      <>
-        <Image
-          src={project.image.src}
-          alt={project.title}
-          fill
-          className="project-card__cover"
-          sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-          priority={featured}
-        />
-        <div className="project-card__cover-shade" aria-hidden />
-      </>
+      <Image
+        src={project.image.src}
+        alt={project.title}
+        fill
+        className="project-card__cover"
+        sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+        priority={featured}
+      />
     );
   }
 

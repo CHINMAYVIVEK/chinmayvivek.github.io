@@ -112,6 +112,20 @@ const paths: Record<ProjectIcon, ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6M9 12h6" />
     </>
   ),
+  sumeru: (
+    <>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 21h16.5M5.25 21V9.75L12 4.5l6.75 5.25V21"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 21v-6h6v6M9.75 9.75h.008v.008H9.75V9.75zm4.5 0h.008v.008h-.008V9.75z"
+      />
+    </>
+  ),
 };
 
 type ProjectIconSvgProps = {

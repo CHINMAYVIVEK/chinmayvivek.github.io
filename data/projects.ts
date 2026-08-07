@@ -2,6 +2,30 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "sumeru",
+    title: "Sumeru",
+    description:
+      "An open-source, modular ERP framework in Go. Every business function — contacts, products, CRM, sales, invoicing — is an addon: a folder with a manifest, Go models, and XML. The kernel discovers it, resolves dependencies, creates tables, and wires menus. PostgreSQL underneath, server-rendered HTML on top — no front-end build step.",
+    outcomes: [
+      "Deployment is a copy: one Go binary beside Postgres — no workers, brokers, or upgrade theatre",
+      "Customise without forking core — three tiers (framework, standard addons, your workspace)",
+      "Plain Postgres tables you can query; events, ACLs, JSON-RPC, and multi-company built into the kernel",
+    ],
+    featured: true,
+    category: ["enterprise"],
+    image: {
+      icon: "sumeru",
+      src: "https://projectmeru.github.io/og.png",
+    },
+    tag: { text: "ERP" },
+    theme: { header: "#1a3f4a", fg: "#f0f5f6" },
+    technologies: ["Go", "PostgreSQL", "XML", "Open Source"],
+    links: {
+      demo: "https://projectmeru.github.io",
+      github: "https://github.com/projectmeru",
+    },
+  },
+  {
     id: "sentinel-vision",
     title: "SentinelVision",
     description:
@@ -11,7 +35,6 @@ export const projects: Project[] = [
       "SORT-based association for stable identity across frames",
       "Deployable core for enterprise surveillance and analytics",
     ],
-    featured: true,
     category: ["enterprise", "ai"],
     image: {
       icon: "sentinel-vision",

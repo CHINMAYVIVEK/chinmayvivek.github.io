@@ -10,7 +10,8 @@ export type ProjectIcon =
   | "analytics"
   | "lms"
   | "school"
-  | "sentinel-vision";
+  | "sentinel-vision"
+  | "sumeru";
 
 export interface ProjectTheme {
   header: string;

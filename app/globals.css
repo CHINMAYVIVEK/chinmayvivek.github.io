@@ -736,10 +736,19 @@ section.visible {
 }
 
 .project-card__header--has-cover {
-  background: color-mix(in srgb, var(--project-header-bg) 88%, var(--ink));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #0c181c;
+}
+
+/* Featured media: full-bleed portrait cover (matches sumeru-og 3:4) */
+.project-card__header--featured {
+  min-height: 18rem;
+}
+
+@media (min-width: 1024px) {
+  .project-card__header--featured.project-card__header--has-cover {
+    min-height: 100%;
+    align-self: stretch;
+  }
 }
 
 .project-card__cover {
@@ -747,9 +756,13 @@ section.visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
-  padding: 0.75rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.project-card__header--featured .project-card__cover {
+  /* Keep brand wordmark readable; crop only outer margins */
+  object-position: 50% 42%;
 }
 
 .project-card__header-grid {

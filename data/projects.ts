@@ -15,7 +15,7 @@ export const projects: Project[] = [
     category: ["enterprise"],
     image: {
       icon: "sumeru",
-      src: "https://projectmeru.github.io/og.png",
+      src: "/assets/img/sumeru-og.webp",
     },
     tag: { text: "ERP" },
     theme: { header: "#1a3f4a", fg: "#f0f5f6" },

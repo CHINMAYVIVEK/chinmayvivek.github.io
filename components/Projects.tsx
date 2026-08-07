@@ -78,7 +78,7 @@ function FeaturedProject({ project }: { project: Project }) {
     >
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div
-          className={`project-card__header relative min-h-[14rem] lg:min-h-[20rem]${hasCover ? " project-card__header--has-cover" : ""}`}
+          className={`project-card__header project-card__header--featured relative min-h-[16rem] lg:min-h-full lg:self-stretch${hasCover ? " project-card__header--has-cover" : ""}`}
         >
           <ProjectMedia project={project} iconClassName="w-14 h-14" featured />
           <span className="project-card__tag absolute top-4 left-4 z-10 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
@@ -117,7 +117,7 @@ function FeaturedProject({ project }: { project: Project }) {
               rel="noopener noreferrer"
               className="site-btn site-btn--primary self-start"
             >
-              View project
+              Visit site
             </a>
           )}
         </div>

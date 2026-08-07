@@ -73,7 +73,7 @@ export function Contact() {
           </div>
         </article>
 
-        <div className="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:items-start">
           <article className="site-card p-8 lg:p-10">
             <h3 className="site-card__title text-xl mb-2">Presence</h3>
             <p className="text-sm text-[var(--muted)] mb-6">

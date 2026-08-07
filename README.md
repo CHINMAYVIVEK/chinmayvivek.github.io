@@ -22,12 +22,11 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Build
 
 ```bash
-bun run build
+bun run build         # next build → out/
+bun run build:local   # compress images, then next build
 ```
 
-Runs `scripts/compress-images.ts` (Bun.Image) then `next build`. Static site output is in `out/`.
-
-Serve the export locally with any static server, e.g. `npx serve out`.
+CI and Docker run image compression before build. Serve the export locally with any static server, e.g. `npx serve out`.
 
 ## Deploy
 
@@ -58,11 +57,12 @@ Build sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com`. Point DNS for `chinm
 
 ```
 app/              layout, page, globals.css, sitemap, robots
-components/       UI sections
+components/       UI sections (+ ThemeToggle)
 data/             typed content (projects, timeline, expertise)
-lib/              SEO config, images helper
+lib/              SEO, images, theme
+hooks/            active section, theme, observers
 scripts/          compress-images.ts (Bun.Image)
-public/assets/    icons, source photos
+public/assets/    icons, photos, project covers
 ```
 
 ## Image compression

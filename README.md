@@ -11,7 +11,7 @@ bun dev
 
 Open http://localhost:3000. `bun run build` writes the site to `out/`.
 
-Copy `.env.example` to `.env` to override the link defaults in `lib/links.ts`. Those links still appear in the built HTML.
+Copy `.env.example` to `.env` and set every link variable before `bun dev` or `bun run build`. Those links still appear in the built HTML.
 
 ## Deploy
 

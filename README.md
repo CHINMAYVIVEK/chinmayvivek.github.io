@@ -16,4 +16,4 @@ Copy `.env.example` to `.env` and set every link variable before `bun dev` or `b
 ## Deploy
 
 - **GitHub Pages** → [chinmayvivek.github.io](https://chinmayvivek.github.io). Push to `main`. Pages source is GitHub Actions. The workflow sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.github.io`. Do not add a custom domain.
-- **Docker** → [chinmayvivek.com](https://chinmayvivek.com). `docker compose up web --build` serves `out/` with nginx on port 8080. The image sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com`. Point that domain at this host only.
+- **Docker** → [chinmayvivek.com](https://chinmayvivek.com). `docker compose up web --build` serves `out/` with nginx on port 8080. The image sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.com`. In Dokploy, set every name from `.env.example` as a build-time variable. Point that domain at this host only.

@@ -1,9 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-
-const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSd9n-L_F7boN_3VOad3dLsXx89Pv7N8Q-Y4BoqHSAZ7WjCNvQ/viewform?embedded=true";
+import { links } from "@/lib/links";
 
 /** Compact height so Google Sign-in fits without scrolling */
 const AUTH_CARD_HEIGHT_PX = 540;
@@ -64,7 +62,7 @@ export function ContactForm() {
           key={iframeKey}
           ref={iframeRef}
           title="Contact Chinmay Vivek"
-          src={FORM_URL}
+          src={links.contactForm}
           width="100%"
           height={iframeHeight}
           loading="eager"

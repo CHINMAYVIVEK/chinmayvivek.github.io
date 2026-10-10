@@ -19,6 +19,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+Copy `.env.example` to `.env` and fill in the link variables before `bun dev` or `bun run build`. GitHub Pages reads the same names from Actions secrets. Docker Compose passes the host `.env` as build args. Those links are still public in the built HTML.
+
 ## Build
 
 ```bash
@@ -39,7 +41,7 @@ CI builds the static export and deploys it as a GitHub Actions artifact. **Nothi
 1. Push to `main` (include `bun.lock`).
 2. **Settings → Pages → Build and deployment → Source: GitHub Actions** (not "Deploy from a branch").
 3. Do **not** set a custom domain on GitHub Pages.
-4. Workflow sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.github.io` at build time.
+4. Workflow sets `NEXT_PUBLIC_SITE_URL=https://chinmayvivek.github.io` at build time. Add the `NEXT_PUBLIC_*` link names from `.env.example` as Actions secrets before the next deploy. Empty secrets fail the build.
 
 The `docs/` folder is not used; built output stays in CI only (`out/` is gitignored).
 

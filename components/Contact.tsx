@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { links } from "@/lib/links";
 import { siteConfig } from "@/lib/seo";
 
 type SocialIconType = "github" | "linkedin" | "x" | "medium";
@@ -15,18 +16,10 @@ const socialIconPaths: Record<SocialIconType, string> = {
 };
 
 const socialLinks: { href: string; label: string; icon: SocialIconType }[] = [
-  { href: "https://github.com/chinmayvivek", label: "GitHub", icon: "github" },
-  {
-    href: "https://linkedin.com/in/chinmayvivek",
-    label: "LinkedIn",
-    icon: "linkedin",
-  },
-  { href: "https://twitter.com/chinmayvivek", label: "X", icon: "x" },
-  {
-    href: "https://chinmayvivek.medium.com/",
-    label: "Medium",
-    icon: "medium",
-  },
+  { href: links.github, label: "GitHub", icon: "github" },
+  { href: links.linkedin, label: "LinkedIn", icon: "linkedin" },
+  { href: links.x, label: "X", icon: "x" },
+  { href: links.medium, label: "Medium", icon: "medium" },
 ];
 
 function formatSocialHref(href: string) {

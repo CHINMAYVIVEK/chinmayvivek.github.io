@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { sectionIdFromHref, useActiveSection } from "@/hooks/useActiveSection";
+import { links } from "@/lib/links";
 import { siteConfig } from "@/lib/seo";
 
 /** Scroll order: who → trusted by → work → stack → lab → contact */
@@ -24,7 +25,7 @@ const navLinks: { href: string; label: string; external?: boolean }[] = [
   { href: "#expertise", label: "Stack" },
   { href: "#research", label: "Lab" },
   { href: "#contact", label: "Contact" },
-  { href: "https://chinmayvivek.medium.com/", label: "Blog", external: true },
+  { href: links.medium, label: "Blog", external: true },
 ];
 
 function navLinkClass(isActive: boolean, mobile = false) {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { links } from "@/lib/links";
 
 /** Set at build time: GitHub Pages → github.io, Docker → chinmayvivek.com */
 export const siteUrl = (
@@ -39,8 +40,8 @@ export const siteConfig = {
     "AI research engineer portfolio",
   ],
   ogImage: "/assets/img/hero-bg.webp",
-  twitter: "@chinmayvivek",
-  calendlyUrl: "https://calendly.com/chinmay-vivek/new-meeting",
+  twitter: links.twitterHandle,
+  calendlyUrl: links.calendly,
 };
 
 const metadataBase = new URL(siteUrl);
@@ -116,12 +117,7 @@ export const jsonLd = {
       description:
         "Applied AI Research Engineer and Full Stack Developer in Bangalore. Building scalable AI products for startups with generative AI, LLM applications, RAG, full-stack backends, and MLOps.",
       alumniOf: { "@type": "CollegeOrUniversity", name: "IIT Jodhpur" },
-      sameAs: [
-        "https://twitter.com/chinmayvivek",
-        "https://linkedin.com/in/chinmayvivek",
-        "https://github.com/chinmayvivek",
-        "https://chinmayvivek.medium.com",
-      ],
+      sameAs: [links.x, links.linkedin, links.github, links.medium],
       knowsAbout: [
         "Generative AI",
         "Large Language Models",

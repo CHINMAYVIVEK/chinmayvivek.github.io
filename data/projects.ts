@@ -1,3 +1,4 @@
+import { links } from "@/lib/links";
 import type { Project } from "./types";
 
 export const projects: Project[] = [
@@ -21,8 +22,8 @@ export const projects: Project[] = [
     theme: { header: "#1a3f4a", fg: "#f0f5f6" },
     technologies: ["Go", "PostgreSQL", "XML", "Open Source"],
     links: {
-      demo: "https://projectmeru.github.io",
-      github: "https://github.com/projectmeru",
+      demo: links.sumeruDemo,
+      github: links.sumeruGithub,
     },
   },
   {
@@ -38,14 +39,14 @@ export const projects: Project[] = [
     category: ["enterprise", "ai"],
     image: {
       icon: "sentinel-vision",
-      src: "https://github.com/CHINMAYVIVEK/SentinelVision/raw/main/screenshots/test_detection_result_letterbox.jpg",
+      src: links.sentinelCover,
     },
     tag: { text: "Computer Vision" },
     theme: { header: "#3d4a5c", fg: "#f2f4f7" },
     technologies: ["Rust", "OpenCV", "ONNX", "SORT"],
     links: {
-      demo: "https://github.com/CHINMAYVIVEK/SentinelVision",
-      github: "https://github.com/CHINMAYVIVEK/SentinelVision",
+      demo: links.sentinelDemo,
+      github: links.sentinelGithub,
     },
   },
   {
@@ -92,7 +93,7 @@ export const projects: Project[] = [
     category: ["ai"],
     image: {
       icon: "llm",
-      src: "https://myoceane.fr/wp-content/uploads/2026/04/vllm.png",
+      src: links.llmCover,
     },
     tag: { text: "Generative AI" },
     theme: { header: "#2a3f6e", fg: "#f0f2f8" },
@@ -131,7 +132,7 @@ export const projects: Project[] = [
     category: ["enterprise"],
     image: {
       icon: "analytics",
-      src: "https://cdn.boldbi.com/wp/blogs/real-time-analytics/financial.webp",
+      src: links.analyticsCover,
     },
     tag: { text: "Full Stack" },
     theme: { header: "#3d4a5c", fg: "#f2f4f7" },
@@ -146,14 +147,14 @@ export const projects: Project[] = [
     category: ["enterprise"],
     image: {
       icon: "lms",
-      src: "https://github.com/CHINMAYVIVEK/liveClass/raw/main/screenshots/Screenshot-1.png",
+      src: links.liveClassCover,
     },
     tag: { text: "Full Stack" },
     theme: { header: "#2d5a68" },
     technologies: ["Go", "Docker", "PostgreSQL", "HTMX"],
     links: {
-      demo: "https://github.com/CHINMAYVIVEK/liveClass",
-      github: "https://github.com/CHINMAYVIVEK/liveClass",
+      demo: links.liveClassDemo,
+      github: links.liveClassGithub,
     },
   },
   {
@@ -167,8 +168,8 @@ export const projects: Project[] = [
     theme: { header: "#4a4458", fg: "#f5f3f8" },
     technologies: ["Go", "Docker", "PostgreSQL"],
     links: {
-      demo: "https://github.com/CHINMAYVIVEK/SwiftSchool",
-      github: "https://github.com/CHINMAYVIVEK/SwiftSchool",
+      demo: links.swiftSchoolDemo,
+      github: links.swiftSchoolGithub,
     },
   },
 ];
